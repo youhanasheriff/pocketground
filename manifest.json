@@ -3,10 +3,11 @@
   "algorithm": "sha256",
   "sha256": {
     ".gitattributes": "20dccdda4a404ebda87504c25f11b6176d15df063648e127f48c80138f1ff2e5",
+    ".github/workflows/verify.yml": "dd874d266e4ad2974accd44ddf7e47ab589a6428f2014b8feda3ff6ed17b3c54",
     ".gitignore": "5d78bf8cbac28348f54e06d4ae438856bd3ffaea9e8aa46aa5e9f891077e6e55",
     "CONTRIBUTING.md": "d47ce954ccefc1c29a112fb4ff11b6cb9ede1367160faf4a93409d2270e0d802",
     "LICENSE": "bd40b20dac7aa5f8a1dd95763bd883bf41a13854ae0e932953a4d36fd904b658",
-    "README.md": "67710d6ddf7ed54dc8a84706724b244bc59120ba6e6b7d6d453717bdb4494c76",
+    "README.md": "2bfb16c817ed79cfb87cf1882bcb7a33afeeb48cffa4923341d33ed900bba336",
     "THIRD_PARTY_NOTICES.md": "b670fdc741caaed8a106dd4b957cfee503fe6e49b73d54e0a30598680c78be98",
     "build_report.py": "b00f2ebd210ad1924a592cfb8d47ac66d3b4fb18a5a24089b831b250ad337037",
     "data/fire-safety-v1/absence-audit.json": "af99fd899530c9d3fa2b7c01f060881cecb0ea485061e3e3150865245ff3fbfc",

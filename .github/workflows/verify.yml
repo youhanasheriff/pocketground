@@ -1,0 +1,28 @@
+name: Verify benchmark evidence
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check pinned evidence
+        run: python pocketground.py verify
+      - name: Test integrity guards
+        run: python -m unittest discover -s tests -v
+      - name: Check deterministic report rebuild
+        run: |
+          python build_report.py
+          git diff --exit-code -- results/scorecard.json results/measurements.csv reports/index.html docs/index.html docs/detailed-40.html

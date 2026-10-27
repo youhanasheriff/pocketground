@@ -4,8 +4,8 @@
 
 PocketGround compares small, quantized local language models using the same
 questions and the same five retrieved passages. Open
-[the interactive report](reports/index.html), inspect any answer, or run the
-questions against your own local server.
+[the interactive report](https://youhanasheriff.github.io/pocketground/), inspect
+any answer, or run the questions against your own local server.
 
 The first release is an **exploratory fixed-context RAG generation benchmark**.
 Its first dataset is fire safety. The benchmark's focus is small-model behavior,
@@ -88,8 +88,8 @@ downloads, exact settings, and how to interpret new runs.
   [related work](docs/RELATED_WORK.md), and
   [dataset description](docs/DATASET.md).
 
-For a public GitHub repository, enable Pages from `main` and the `/docs` folder
-to show the standalone report. The same report is provided as `docs/index.html`.
+The public report uses GitHub Pages from `main` and the `/docs` folder.
+The same report is provided as `docs/index.html` and `reports/index.html`.
 The report needs no external scripts, API keys, accounts, or network access;
 source links need a connection.
 
