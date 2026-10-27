@@ -1,0 +1,3 @@
+* text eol=lf
+licenses/*.txt -text whitespace=cr-at-eol
+templates/*.jinja -whitespace

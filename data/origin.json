@@ -1,0 +1,16 @@
+{
+  "suite": "pocketground-fire-safety-v1",
+  "source_record_sha256": {
+    "prepared-cases.json": "7e1fd41d6e130402b96fb36b8c98962d6a5da8f48f20e7245cdf472aefaff372",
+    "questions.json": "77456725e98da3c3880bbb5ceb342e24e7cefae5c17b848bc0143183bddcb9d9",
+    "review.json": "cff7e2cc1e49d45fdcf89a5699c73e5bca624da37178ae9f0ac784aa599f2ba7",
+    "protocol.json": "9a3f4d6814884cc325e682a65ff2775e1e8c8887faf0b047fd7581b9c93a6db6",
+    "evaluations/lfminstruct.json": "0c459e04c3ad5143944d36378f912267c6ac5de92c57f38438d72b54dca9d0ad",
+    "evaluations/lfmrag.json": "7dc223941aa7ab045fb6e168091b48c695a58a8cbc12e54a301a327373ede08e",
+    "evaluations/minicpm.json": "00abc808db78138282374617c5848c4d80bf728b8796012f0fdc2f6cb22c3958",
+    "evaluations/q4.json": "dda619894749c32a356c1f7da4e441a7c55c27a83747263ed37afcca225cc460",
+    "evaluations/q8.json": "86d1e2ea075cee0b2cd712bf762479cf2e468e47cb30b7ff06721ebc1bfcf0b2",
+    "evaluations/qwen2.json": "81d84f93d0836169febd9a5d037a5ed06ac08fa90dd6025f3fc26f5c9954b5c0"
+  },
+  "transformation": "Original answer text, timing, token counts, warmups, per-answer hashes and judgments retained. Added portable suite/label/split fields. Core/supplement changes presentation only; no new inference or rescoring."
+}

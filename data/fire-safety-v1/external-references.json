@@ -1,0 +1,13 @@
+{
+  "references": {
+    "pass": "https://www.osha.gov/etools/evacuation-plans-procedures/emergency-standards/portable-extinguishers/use",
+    "triangle": "https://www.osha.gov/sites/default/files/2019-03/fireprotection.pdf",
+    "tetrahedron": "https://www.nist.gov/glossary-term/23921",
+    "classes": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/fire-extinguishers/",
+    "co2": "https://www.osha.gov/etools/evacuation-plans-procedures/emergency-standards/portable-extinguishers/about",
+    "thermal": "https://www.usfa.fema.gov/a-z/lithium-ion-batteries/risks-and-response-strategies/",
+    "roll": "https://www.usfa.fema.gov/gallery/pictographs/stop-drop-roll.html"
+  },
+  "purpose": "Evaluator-only gold references; these external facts are not fed into model context or the local index.",
+  "checked_utc": "2026-10-27"
+}

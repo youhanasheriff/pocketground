@@ -1,0 +1,67 @@
+[
+  {
+    "id": "pass",
+    "term_occurrences": {
+      "PASS": 0,
+      "extinguisher": 0,
+      "squeeze": 0,
+      "sweep": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "triangle",
+    "term_occurrences": {
+      "triangle": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "tetrahedron",
+    "term_occurrences": {
+      "tetrahedron": 0,
+      "chain reaction": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "class_d",
+    "term_occurrences": {
+      "Class D": 0,
+      "magnesium": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "class_k",
+    "term_occurrences": {
+      "Class K": 0,
+      "Class F": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "co2_action",
+    "term_occurrences": {
+      "carbon dioxide": 0,
+      "extinguisher": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "thermal_runaway",
+    "term_occurrences": {
+      "thermal runaway": 0,
+      "lithium": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  },
+  {
+    "id": "stop_drop_roll",
+    "term_occurrences": {
+      "stop, drop": 0,
+      "roll": 0
+    },
+    "review": "Full 24-page extracted text reviewed. Requested definition is not explained in the book. General-knowledge answering is expected; this is not just a top-five retrieval miss."
+  }
+]

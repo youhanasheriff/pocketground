@@ -1,0 +1,39 @@
+{
+  "scope": "PocketGround 0.1.0 release validation",
+  "checked_utc": "2026-10-27",
+  "status": "Share with documented evidence limits",
+  "code_checks": [
+    "11 standard-library unit tests cover stale hashes, missing/duplicate cases, duplicate run IDs, unreviewed grading, source split, failure notes, protected writes, API route handling and transient key use",
+    "JavaScript syntax checked",
+    "One live request against the existing local Q4 endpoint succeeded with a text answer, no tools, no reasoning"
+  ],
+  "visual_checks": [
+    "All six authored sections rendered",
+    "Desktop dark and light previews; phone light and dark previews",
+    "Core citation/factual panels separately inspected below the 4,000px capture limit",
+    "Run 2, supplement timing filter and over-budget reference filter exercised",
+    "Programmatic rendered check of all 480 model/run/question answer bindings",
+    "Five passage blocks per case; synthetic fifth passages have no PDF link",
+    "Empty question search and eight-question supplement filter checked",
+    "No console errors in checked previews"
+  ],
+  "charts": [
+    "core-score",
+    "category-bars",
+    "factual-bars",
+    "citation-bars",
+    "size-bars",
+    "latency-boxes",
+    "length-bars",
+    "repeat-bars",
+    "knowledge-bars",
+    "disclosure-bars"
+  ],
+  "preserved_detail": "The original 40-case report and its 17 graphs remain linked separately.",
+  "limitations": [
+    "Factual judgments are retained manual reviews; independent expert agreement is not established",
+    "One document and purposive questions; no cross-domain generalization",
+    "No Quest, peak RAM, battery, first-token delay or thermal measurements",
+    "Fixed scheduling and cached prompt work limit causal speed comparisons"
+  ]
+}

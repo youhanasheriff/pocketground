@@ -1,0 +1,682 @@
+{
+  "benchmark": "PocketGround",
+  "version": "0.1.0",
+  "dataset": "pocketground-fire-safety-v1",
+  "core": 32,
+  "supplement": 8,
+  "responses": 480,
+  "models": [
+    {
+      "key": "q4",
+      "name": "Qwen3.5-0.8B Q4_K_M",
+      "bytes": 532517120,
+      "budget_eligible": true,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 7,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 2,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.298,
+              "q1": 0.5235000000000001,
+              "median": 0.591,
+              "q3": 0.72975,
+              "max": 1.093
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.428,
+              "q1": 0.7055,
+              "median": 0.9890000000000001,
+              "q3": 1.323,
+              "max": 1.6
+            },
+            "all": {
+              "n": 40,
+              "min": 0.298,
+              "q1": 0.5235000000000001,
+              "median": 0.6194999999999999,
+              "q3": 0.8225,
+              "max": 1.6
+            }
+          },
+          "length_cutoffs": 0,
+          "book_citation_presence": 6,
+          "knowledge_disclosure": 4
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 7,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 2,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.176,
+              "q1": 0.50075,
+              "median": 0.5945,
+              "q3": 0.70575,
+              "max": 1.195
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.219,
+              "q1": 0.6577500000000001,
+              "median": 1.038,
+              "q3": 1.2850000000000001,
+              "max": 1.785
+            },
+            "all": {
+              "n": 40,
+              "min": 0.176,
+              "q1": 0.50075,
+              "median": 0.6014999999999999,
+              "q3": 0.8222499999999999,
+              "max": 1.785
+            }
+          },
+          "length_cutoffs": 0,
+          "book_citation_presence": 6,
+          "knowledge_disclosure": 4
+        }
+      ]
+    },
+    {
+      "key": "q8",
+      "name": "Qwen3.5-0.8B Q8_0",
+      "bytes": 811843840,
+      "budget_eligible": true,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 7,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 1,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.324,
+              "q1": 0.48124999999999996,
+              "median": 0.634,
+              "q3": 0.9970000000000001,
+              "max": 2.0
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.417,
+              "q1": 0.50725,
+              "median": 0.743,
+              "q3": 0.9144999999999999,
+              "max": 1.378
+            },
+            "all": {
+              "n": 40,
+              "min": 0.324,
+              "q1": 0.48124999999999996,
+              "median": 0.644,
+              "q3": 0.9970000000000001,
+              "max": 2.0
+            }
+          },
+          "length_cutoffs": 1,
+          "book_citation_presence": 4,
+          "knowledge_disclosure": 7
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 7,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 1,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.195,
+              "q1": 0.485,
+              "median": 0.6275,
+              "q3": 0.9365000000000001,
+              "max": 2.176
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.219,
+              "q1": 0.45325000000000004,
+              "median": 0.7424999999999999,
+              "q3": 0.8140000000000001,
+              "max": 1.574
+            },
+            "all": {
+              "n": 40,
+              "min": 0.195,
+              "q1": 0.485,
+              "median": 0.64,
+              "q3": 0.92325,
+              "max": 2.176
+            }
+          },
+          "length_cutoffs": 1,
+          "book_citation_presence": 4,
+          "knowledge_disclosure": 7
+        }
+      ]
+    },
+    {
+      "key": "qwen2",
+      "name": "Qwen3.5-2B Q4_K_M",
+      "bytes": 1280835840,
+      "budget_eligible": false,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 20,
+              "total": 20
+            },
+            "scope": {
+              "passed": 5,
+              "total": 8
+            },
+            "handling": {
+              "passed": 4,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 3,
+              "total": 8
+            }
+          },
+          "core_passed": 29,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.848,
+              "q1": 1.0799999999999998,
+              "median": 1.201,
+              "q3": 1.5264999999999997,
+              "max": 3.083
+            },
+            "supplement": {
+              "n": 8,
+              "min": 1.041,
+              "q1": 1.215,
+              "median": 1.538,
+              "q3": 1.9380000000000002,
+              "max": 2.415
+            },
+            "all": {
+              "n": 40,
+              "min": 0.848,
+              "q1": 1.112,
+              "median": 1.2465000000000002,
+              "q3": 1.7865000000000002,
+              "max": 3.083
+            }
+          },
+          "length_cutoffs": 1,
+          "book_citation_presence": 18,
+          "knowledge_disclosure": 8
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 20,
+              "total": 20
+            },
+            "scope": {
+              "passed": 5,
+              "total": 8
+            },
+            "handling": {
+              "passed": 4,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 3,
+              "total": 8
+            }
+          },
+          "core_passed": 29,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.69,
+              "q1": 0.9610000000000001,
+              "median": 1.1749999999999998,
+              "q3": 1.4937500000000001,
+              "max": 3.256
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.505,
+              "q1": 1.024,
+              "median": 1.282,
+              "q3": 1.63575,
+              "max": 2.375
+            },
+            "all": {
+              "n": 40,
+              "min": 0.505,
+              "q1": 0.9610000000000001,
+              "median": 1.1844999999999999,
+              "q3": 1.565,
+              "max": 3.256
+            }
+          },
+          "length_cutoffs": 1,
+          "book_citation_presence": 18,
+          "knowledge_disclosure": 8
+        }
+      ]
+    },
+    {
+      "key": "lfmrag",
+      "name": "LFM2-1.2B-RAG Q4_K_M",
+      "bytes": 730894048,
+      "budget_eligible": true,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 4,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 4,
+              "total": 8
+            }
+          },
+          "core_passed": 25,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.298,
+              "q1": 0.5195000000000001,
+              "median": 0.6555,
+              "q3": 0.79125,
+              "max": 1.665
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.763,
+              "q1": 0.8695,
+              "median": 0.961,
+              "q3": 1.0667499999999999,
+              "max": 1.308
+            },
+            "all": {
+              "n": 40,
+              "min": 0.298,
+              "q1": 0.53225,
+              "median": 0.696,
+              "q3": 0.92825,
+              "max": 1.665
+            }
+          },
+          "length_cutoffs": 1,
+          "book_citation_presence": 5,
+          "knowledge_disclosure": 1
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 4,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 4,
+              "total": 8
+            }
+          },
+          "core_passed": 25,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.136,
+              "q1": 0.494,
+              "median": 0.599,
+              "q3": 0.8475,
+              "max": 1.643
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.296,
+              "q1": 0.48525,
+              "median": 0.609,
+              "q3": 0.855,
+              "max": 1.188
+            },
+            "all": {
+              "n": 40,
+              "min": 0.136,
+              "q1": 0.494,
+              "median": 0.601,
+              "q3": 0.8475,
+              "max": 1.643
+            }
+          },
+          "length_cutoffs": 1,
+          "book_citation_presence": 5,
+          "knowledge_disclosure": 1
+        }
+      ]
+    },
+    {
+      "key": "lfminstruct",
+      "name": "LFM2.5-1.2B-Instruct Q4_K_M",
+      "bytes": 730895168,
+      "budget_eligible": true,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 15,
+              "total": 20
+            },
+            "scope": {
+              "passed": 6,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 5,
+              "total": 8
+            }
+          },
+          "core_passed": 23,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.512,
+              "q1": 0.623,
+              "median": 0.7464999999999999,
+              "q3": 0.9327500000000001,
+              "max": 1.442
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.619,
+              "q1": 0.8434999999999999,
+              "median": 1.1364999999999998,
+              "q3": 1.47875,
+              "max": 1.628
+            },
+            "all": {
+              "n": 40,
+              "min": 0.512,
+              "q1": 0.67875,
+              "median": 0.7945,
+              "q3": 1.00375,
+              "max": 1.628
+            }
+          },
+          "length_cutoffs": 0,
+          "book_citation_presence": 19,
+          "knowledge_disclosure": 0
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 15,
+              "total": 20
+            },
+            "scope": {
+              "passed": 6,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 5,
+              "total": 8
+            }
+          },
+          "core_passed": 23,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.308,
+              "q1": 0.53925,
+              "median": 0.6515,
+              "q3": 0.8524999999999999,
+              "max": 1.436
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.273,
+              "q1": 0.513,
+              "median": 1.052,
+              "q3": 1.27025,
+              "max": 1.494
+            },
+            "all": {
+              "n": 40,
+              "min": 0.273,
+              "q1": 0.53925,
+              "median": 0.6950000000000001,
+              "q3": 0.91425,
+              "max": 1.494
+            }
+          },
+          "length_cutoffs": 0,
+          "book_citation_presence": 19,
+          "knowledge_disclosure": 0
+        }
+      ]
+    },
+    {
+      "key": "minicpm",
+      "name": "MiniCPM5-1B Q4_K_M",
+      "bytes": 688065920,
+      "budget_eligible": true,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 4,
+              "total": 20
+            },
+            "scope": {
+              "passed": 4,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 0,
+              "total": 8
+            }
+          },
+          "core_passed": 10,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.147,
+              "q1": 0.277,
+              "median": 0.3395,
+              "q3": 0.525,
+              "max": 1.536
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.233,
+              "q1": 0.2655,
+              "median": 0.401,
+              "q3": 0.54825,
+              "max": 0.752
+            },
+            "all": {
+              "n": 40,
+              "min": 0.147,
+              "q1": 0.274,
+              "median": 0.3395,
+              "q3": 0.525,
+              "max": 1.536
+            }
+          },
+          "length_cutoffs": 3,
+          "book_citation_presence": 12,
+          "knowledge_disclosure": 2
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 4,
+              "total": 20
+            },
+            "scope": {
+              "passed": 4,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 0,
+              "total": 8
+            }
+          },
+          "core_passed": 10,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.059,
+              "q1": 0.221,
+              "median": 0.28,
+              "q3": 0.3925,
+              "max": 1.465
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.032,
+              "q1": 0.19025,
+              "median": 0.3005,
+              "q3": 0.42500000000000004,
+              "max": 0.73
+            },
+            "all": {
+              "n": 40,
+              "min": 0.032,
+              "q1": 0.221,
+              "median": 0.28,
+              "q3": 0.403,
+              "max": 1.465
+            }
+          },
+          "length_cutoffs": 3,
+          "book_citation_presence": 12,
+          "knowledge_disclosure": 2
+        }
+      ]
+    }
+  ]
+}

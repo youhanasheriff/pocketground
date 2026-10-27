@@ -1,0 +1,24 @@
+{
+  "pages": 24,
+  "passages": 25,
+  "index_bytes": 118784,
+  "embedding_bytes": 23026053,
+  "repairs": {
+    "alar ms": "alarms",
+    "e ve r y": "every",
+    "protec tion": "protection",
+    "interconnec ted": "interconnected",
+    "Tes t": "Test",
+    "ever yone": "everyone",
+    "Te s t e a c h a l a r m": "Test each alarm"
+  },
+  "source_pages_visually_checked": [
+    4,
+    5,
+    8,
+    10,
+    13,
+    16,
+    20
+  ]
+}
