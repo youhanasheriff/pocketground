@@ -716,7 +716,7 @@
     },
     {
       "key": "q4_current",
-      "name": "Qwen3.5-0.8B Q4_K_M \u00b7 refreshed runtime",
+      "name": "Qwen3.5-0.8B Q4_K_M",
       "cohort": "2026-10-28-compatible-runtime",
       "bytes": 532517120,
       "budget_eligible": true,

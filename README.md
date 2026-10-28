@@ -12,23 +12,28 @@ Its first dataset is fire safety. The benchmark's focus is small-model behavior,
 and the source topic is one case study. More domains are needed before making
 cross-domain reliability claims.
 
-## Latest comparison: LFM3 and a refreshed baseline
+## 28 October 2026: Qwen3.5 and LFM3
 
 Version 0.2.0 adds the text-generation paths of two Q4_K_M checkpoints and reruns
 the Qwen baseline on the same compatible runtime. Each configuration completes
 the unchanged 40 questions twice. All 240 new responses are included alongside
 the original 480; the original evidence remains byte-identical.
 
-| Configuration | File MB | Document /20 | Boundary /8 | Handling /4 | Core /32 |
-|---|---:|---:|---:|---:|---:|---:|
-| Qwen3.5-0.8B Q4_K_M · refreshed | 532.5 | 19 | 7 | 2 | 28 |
+| Model | File MB | Document answers /20 | Off-topic refusals /8 | Missing or conflicting evidence /4 | Total /32 |
+|---|---:|---:|---:|---:|---:|
+| Qwen3.5-0.8B Q4_K_M | 532.5 | 19 | 7 | 2 | 28 |
 | LFM3-Omni-2B Q4_K_M · text only | 1099.6 | 20 | 6 | 2 | 28 |
 | LFM3-1.7B Q4_K_M | 1099.6 | 20 | 2 | 2 | 24 |
+
+**Reading model names:** B means billion parameters. Q4_K_M and Q8_0 identify
+the quantization formats used to store the model weights. Parameter count,
+download size, and memory use are different measurements. Omni's 2B name
+describes the published multimodal model; only its text-generation path was tested.
 
 These quality counts are the same in both runs. The text model repeats 39/40
 answers exactly; Omni and the baseline repeat 40/40. The text model produces
 14/15 cutoffs in runs 1/2, versus 2/2 for Omni and 0/0 for the baseline.
-Both LFM3 text-generation GGUFs exceed the strict 1 GB file budget. Omni's
+File sizes describe the downloaded text-generation weights. Omni's
 additional projector/audio components were not loaded and are not included in
 that file size; its speech and vision quality were not tested.
 
@@ -38,20 +43,20 @@ deliberation-style prose. Raw outputs are retained. Input controls and observed
 output compliance are separate; marker absence is not proof that a response
 contains no reasoning-style text. See [the new comparison notes](docs/LATEST_COMPARISON.md).
 
-The refreshed comparison uses one compatible runtime build for all three
-configurations. Use the report's comparison selector to view original or refreshed
-results; do not directly equate timings across runtime groups.
+The 28 October tests use one runtime build for all three configurations.
+The 27 October tests used an older build. Select a test date before comparing
+speed. Qwen3.5-0.8B Q4_K_M was tested on both dates; it is the same model file.
 
-## Original six-configuration comparison
+## 27 October 2026: six model configurations
 
-| Configuration | File MB | Document /20 | Boundary /8 | Handling /4 | Core /32 |
+| Model | File MB | Document answers /20 | Off-topic refusals /8 | Missing or conflicting evidence /4 | Total /32 |
 |---|---:|---:|---:|---:|---:|
 | Qwen3.5-0.8B Q4_K_M | 532.5 | 19 | 7 | 2 | 28 |
 | Qwen3.5-0.8B Q8_0 | 811.8 | 19 | 7 | 2 | 28 |
 | LFM2-1.2B-RAG Q4_K_M | 730.9 | 19 | 4 | 2 | 25 |
 | LFM2.5-1.2B-Instruct Q4_K_M | 730.9 | 15 | 6 | 2 | 23 |
 | MiniCPM5-1B Q4_K_M | 688.1 | 4 | 4 | 2 | 10 |
-| Qwen3.5-2B Q4_K_M · reference above budget | 1280.8 | 20 | 5 | 4 | 29 |
+| Qwen3.5-2B Q4_K_M | 1280.8 | 20 | 5 | 4 | 29 |
 
 **Q4 and Q8 tie on core task success. Q4 has the smaller file. No configuration
 passes every requirement.** These counts repeat in both recorded runs.
@@ -141,7 +146,7 @@ This release does not rank retrievers or establish production reliability.
 Runtime is non-streaming completion time, excluding retrieval and model loading.
 Fixed model order, prompt caching, and answer length affect it. No headset
 speed, peak RAM, frame rate, first-token delay, power, or thermal measurements
-have been collected. **Under 1 GB means model-file bytes, not runtime RAM.**
+have been collected. Model file size is not runtime RAM usage.
 
 ## Develop and contribute
 

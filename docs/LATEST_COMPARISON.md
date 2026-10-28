@@ -23,17 +23,17 @@ runtime groups, not nine distinct model checkpoints.
 
 | Configuration | File MB | Document /20 | Boundary /8 | Handling /4 | Core /32 | Supplement /8 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Refreshed Qwen 0.8B Q4 | 532.5 | 19 | 7 | 2 | 28 | 2 |
-| LFM3 Omni Q4, text only | 1099.6 | 20 | 6 | 2 | 28 | 3 |
-| LFM3 text 1.7B Q4 | 1099.6 | 20 | 2 | 2 | 24 | 3 |
+| Qwen3.5-0.8B Q4_K_M | 532.5 | 19 | 7 | 2 | 28 | 2 |
+| LFM3-Omni-2B Q4_K_M, text only | 1099.6 | 20 | 6 | 2 | 28 | 3 |
+| LFM3-1.7B Q4_K_M | 1099.6 | 20 | 2 | 2 | 24 | 3 |
 
 Counts are identical between the two runs. Both LFM configurations improve the
 document subset relative to this baseline, while losing more boundary tasks.
 No configuration passes every core requirement. The equal core total for Omni
 and Qwen hides different strengths; inspect the separate group counts.
 
-Both LFM3 GGUF files are strictly larger than the benchmark's decimal 1 GB
-model-file budget. Omni's total multimodal deployment footprint is larger than
+File size is reported in decimal MB and does not measure runtime RAM.
+Omni's total multimodal deployment footprint is larger than
 the text-generation file measured here. These data say nothing about its
 recognition, speech synthesis, image understanding, or headset performance.
 
@@ -51,8 +51,8 @@ used self-directed deliberation-style prose. The official
 thinking can be inconsistent. The report distinguishes configured controls from
 observed output behavior. We did not remove markers or hide preceding text.
 
-Omni and the refreshed baseline emitted no explicit thinking markers. This is
-a marker check, not an exhaustive proof that no answer contains reasoning-style
+Omni and the Qwen baseline tested on 28 October emitted no explicit thinking
+markers. This is a marker check, not an exhaustive proof that no answer contains reasoning-style
 prose. No structured tool calls were returned by any of the three candidates.
 
 The text model reached the 192-token limit in 14/40 and 15/40 responses; Omni
@@ -70,7 +70,7 @@ Omni answer texts match between runs. The text model matches 39/40; its changed
 deaf-alert answer was reviewed separately and contains the required types before
 cutoff. Citation misattributions and material extra advice are flagged in notes.
 
-All 80 refreshed Qwen outputs match their original corresponding answers
+All 80 Qwen outputs from 28 October match their original corresponding answers
 exactly. Its judgments were reused only after byte equality and answer SHA256
 were verified. Independent expert review and inter-rater agreement remain absent.
 
@@ -94,7 +94,7 @@ thinking off and no tools. Model-native templates differ, as in the original
 benchmark. The Apple M3 Pro has 18 GB unified memory. Existing application
 servers were left running; host state and caching remain timing confounds.
 
-Use the report's refreshed group for within-group timing comparisons. Do not
+Select the report's 28 October tests for within-group timing comparisons. Do not
 equate old and new runtime timings. The two runs remain separate, and text
 length differs substantially. No randomized order, thermal isolation, peak-RAM
 measurement, or first-token/Quest measurements were performed.

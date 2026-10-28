@@ -42,7 +42,7 @@ Its upstream source is <https://github.com/ggml-org/llama.cpp>.
 Using a different build is a new runtime configuration; record it.
 
 That original build is not compatible with the new LFM3 checkpoints. For those
-models, use the refreshed runtime group in docs/LATEST_COMPARISON.md and rerun
+models, use the 28 October runtime group in docs/LATEST_COMPARISON.md and rerun
 the Qwen baseline on the same compatible runtime. Keep their timings separate
 from the original group.
 
@@ -151,5 +151,5 @@ Relative links to the detailed report need the accompanying folder.
 The LFM3 text and Omni checkpoints require a compatible newer runtime.
 `docs/LATEST_COMPARISON.md` records the exact tested configuration, disabled
 thinking controls, observed output-mode failures, and the owned-server wrapper.
-Use its three-configuration group, including the refreshed Qwen baseline, for
+Use its three-configuration group, including the Qwen baseline tested on 28 October, for
 within-runtime comparisons. The original six-configuration evidence is unchanged.

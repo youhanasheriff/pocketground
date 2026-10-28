@@ -50,7 +50,8 @@ they are not required simply to inspect the report.
 
 ## Positioning
 
-PocketGround 0.1.0 emphasizes quantized model files below 1 GB, fixed retrieved
-context, clear boundary/stress cases, and inspectable judgments. It is an
-exploratory first release. This description makes no claim of being the first
+PocketGround compares small quantized models using fixed retrieved context,
+separate checks for document answers and off-topic refusals, and visible review
+notes. Parameter count, quantization, file size, and speed accompany the scores.
+The current evidence comes from one document. This description makes no claim of being the first
 small-model RAG benchmark, the largest, or a general reliability standard.
