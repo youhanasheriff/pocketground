@@ -3,6 +3,7 @@ from collections import Counter
 import csv
 import hashlib
 import json
+import re
 from pathlib import Path
 import statistics
 
@@ -15,6 +16,8 @@ def validate_release():
         target=ROOT/path
         if not target.is_file() or hashlib.sha256(target.read_bytes()).hexdigest()!=expected:
             raise ValueError(f'Release checksum mismatch: {path}')
+    for path,expected in read('data/original-snapshot.json')['unchanged_files'].items():
+        assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==expected,f'Original evidence changed: {path}'
     data=read('data/fire-safety-v1/dataset.json');summary=read('results/scorecard.json')
     cases=data['cases'];ids=[c['id'] for c in cases]
     assert len(ids)==len(set(ids))==40
@@ -28,7 +31,7 @@ def validate_release():
         if c.get('mutation'):
             assert c['passages'][:4]==c['natural_passages'][:4]
             assert c['passages'][4]['synthetic'] and c['passages'][4]['pdf_page'] is None
-    count=0;cutoffs=0
+    count=0;cutoffs=0;original_cutoffs=0;core_scores={}
     expected_core={'q4':28,'q8':28,'qwen2':29,'lfmrag':25,'lfminstruct':23,'minicpm':10}
     for m in summary['models']:
         key=m['key'];raw=read(f'results/reference/{key}.json');review=read(f'results/reference/{key}.review.json')
@@ -44,7 +47,8 @@ def validate_release():
                 assert r['generation_seconds']>=0
                 count+=1;cutoffs+=r['finish_reason']=='length'
             n=sum(jud[c['id']]['task_success'] for c in cases if c['split']=='core')
-            assert n==derived['core_passed']==expected_core[key] and derived['core_total']==32
+            assert n==derived['core_passed'] and derived['core_total']==32
+            if key in expected_core:assert n==expected_core[key]
             for kind in ['book','scope','handling','knowledge']:
                 members=[c for c in cases if c['kind']==kind]
                 assert derived['groups'][kind]=={'passed':sum(jud[c['id']]['task_success'] for c in members),'total':len(members)}
@@ -56,22 +60,39 @@ def validate_release():
                     return vals[lo]+(pos-lo)*(vals[hi]-vals[lo])
                 d=derived['latency'][split]
                 for k,q in [('q1',.25),('median',.5),('q3',.75)]:assert abs(d[k]-quantile(q))<1e-9
-        assert all(a['answer']['content']==b['answer']['content'] for a,b in zip(raw['runs'][0]['results'],raw['runs'][1]['results']))
+        matches=sum(a['answer']['content']==b['answer']['content'] for a,b in zip(raw['runs'][0]['results'],raw['runs'][1]['results']))
+        assert matches==m['same_answers']
+        core_scores[key]=[r['core_passed'] for r in m['runs']]
+        if key in expected_core:
+            original_cutoffs+=sum(r['finish_reason']=='length' for run in raw['runs'] for r in run['results'])
+        else:
+            cohort=read(f"data/cohorts/{m['cohort']}.json")
+            assert raw['runtime_binary_sha256']==cohort['runtime_binary_sha256']
+            assert raw['verified_loaded_weight_sha256']==raw['profile']['sha256']
+            assert raw['template_sha256']==hashlib.sha256((ROOT/'templates'/raw['profile']['chat_template']).read_bytes()).hexdigest()
+            assert 'completed_utc' in cohort
+            assert cohort['settings']['reasoning']=='off' and cohort['settings']['tools'] is False
+        for trial,derived in zip(raw['runs'],m['runs']):
+            # Verify output compliance measurements, without assuming disabled mode was obeyed.
+            markers=sum(bool(re.search(r'</?think\b',r['answer']['content']) or r['answer'].get('reasoning_content')) for r in trial['results'])
+            tools=sum(bool(r['answer'].get('tool_calls') or '<tool_call>' in r['answer']['content']) for r in trial['results'])
+            assert derived['thinking_markers']==markers and derived['tool_outputs']==tools
     csvrows=list(csv.DictReader((ROOT/'results/measurements.csv').open()))
-    assert count==len(csvrows)==480
-    assert len({(r['model'],r['run'],r['question']) for r in csvrows})==480
-    assert cutoffs==12
+    assert count==len(csvrows)==len(summary['models'])*80==summary['responses']
+    assert len({(r['model'],r['run'],r['question']) for r in csvrows})==count
+    assert original_cutoffs==12
     # Check the approved public export; values in third-party model IDs/licenses are technical references.
     forbidden=['/Users/','/home/','drive.google.com','credentials.enc','Bearer sk-','ghp_']
-    for path in ROOT.rglob('*'):
-        if not path.is_file() or '__pycache__' in path.parts or path.name=='validate.py' or '.git' in path.parts:continue
+    for name in manifest['sha256']:
+        path=ROOT/name
+        if path.name=='validate.py':continue
         if path.suffix not in ['.json','.jsonl','.py','.html','.js','.css','.md','.txt','.jinja'] and path.name not in ['LICENSE','.gitignore']:continue
         content=path.read_text()
         for marker in forbidden:
             assert marker not in content,f'Non-public marker in {path.relative_to(ROOT)}'
     return {'status':'passed','pinned_files':len(manifest['sha256']),'core_cases':32,'supplementary_cases':8,
-        'measured_responses':count,'length_cutoffs_retained':cutoffs,'core_scores':expected_core,
-        'checks':['file checksums','40 exact prompt hashes','480 exact answer review hashes','split denominators',
+        'measured_responses':count,'length_cutoffs_retained':cutoffs,'core_scores_by_run':core_scores,
+        'checks':['file checksums','unchanged original evidence','40 exact prompt hashes','all exact answer review hashes','split denominators',
                   'per-group counts','independent latency quartiles','duplicate-free CSV','synthetic passage labels',
                   'context budgets','repeat equality','bounded private-marker scan'],
         'limits':'Checks do not independently validate every factual judgment or establish production reliability.'}

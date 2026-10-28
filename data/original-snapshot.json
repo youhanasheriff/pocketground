@@ -1,0 +1,21 @@
+{
+  "release": "v0.1.0",
+  "source_commit": "f96a265be6e01ae2d046c2b1efaf56032ad26ff5",
+  "unchanged_files": {
+    "data/fire-safety-v1/dataset.json": "e904ff62ebbbca2c020c1646f702a7b25174a57a2bde4508c71e10e3ac893a16",
+    "data/fire-safety-v1/protocol.json": "9a3f4d6814884cc325e682a65ff2775e1e8c8887faf0b047fd7581b9c93a6db6",
+    "data/fire-safety-v1/rubric.json": "8d2802c05fd3814fc34d4011c3c8f91a4a9b2fd162379b5dff57cfd2ad0e730f",
+    "results/reference/q4.json": "92dee4144055d7059f52b4c9347efcbafe19c86bc57e4fb19f38644065b391d2",
+    "results/reference/q4.review.json": "0543da3805c6f0b696c244495b26cb9d5ca0a996f073697039ffdb2628201314",
+    "results/reference/q8.json": "b9ef611460a55a3e4a1c42288b734300554bbd6503048c6f85e94035cd6d209c",
+    "results/reference/q8.review.json": "3a1bff3c44b9a7e25783324803c5a7168e9d16704d50e283c175cbc9e4ae4ac9",
+    "results/reference/qwen2.json": "243f8014197aec1a66bc3d3995fd86e089df7d459f0544e3e76fda148defb6ad",
+    "results/reference/qwen2.review.json": "077c33b88ae830f36dbd17a38ef723d4d1a8f458ef41cdfce2383fce8f9b13b1",
+    "results/reference/lfmrag.json": "6a5542bc08ff3c9d49020a983fcb53aa56578c3abca074ce8ab829c10ed86cf5",
+    "results/reference/lfmrag.review.json": "bffb4a417f8792826b023bfe1c7a59c9cbdf136ae0bc6850b1073fc482138ba4",
+    "results/reference/lfminstruct.json": "c8e33a01531f0cebcb7e85dcc8f8fe49cc64515eb6e8125e77883a1612123433",
+    "results/reference/lfminstruct.review.json": "e27321528dbf9b55cfedace3cc7048d524f2888da57767fe6e4f49c8f73cf339",
+    "results/reference/minicpm.json": "d9a0c06689ef3db149c16188ebf8b6c33eb60a99b96e886a7ed1fb20aae62eb7",
+    "results/reference/minicpm.review.json": "15dfab11c80094fa9ffea8387895d08b1e94f7c67698ef914459937344fded5d"
+  }
+}

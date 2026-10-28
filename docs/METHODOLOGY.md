@@ -9,6 +9,12 @@ Five fit a strictly sub-1,000,000,000-byte model-file budget; the 2B profile is
 an explicitly over-budget reference. Parameter count, file size, and runtime
 RAM are different quantities.
 
+This document records the original reference experiment. Version 0.2.0 retains
+it unchanged and adds a separately identified compatible-runtime group for LFM3
+text, LFM3 Omni's text path, and a refreshed Qwen baseline. The new experiment,
+observed thinking-off failures, and per-run cutoffs are documented in
+[LATEST_COMPARISON.md](LATEST_COMPARISON.md).
+
 ## Inputs and reporting splits
 
 Each of the 40 questions has the same frozen five passages across all models.

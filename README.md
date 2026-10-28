@@ -7,12 +7,42 @@ questions and the same five retrieved passages. Open
 [the interactive report](https://youhanasheriff.github.io/pocketground/), inspect
 any answer, or run the questions against your own local server.
 
-The first release is an **exploratory fixed-context RAG generation benchmark**.
+This is an **exploratory fixed-context RAG generation benchmark**.
 Its first dataset is fire safety. The benchmark's focus is small-model behavior,
 and the source topic is one case study. More domains are needed before making
 cross-domain reliability claims.
 
-## Understand the result in one minute
+## Latest comparison: LFM3 and a refreshed baseline
+
+Version 0.2.0 adds the text-generation paths of two Q4_K_M checkpoints and reruns
+the Qwen baseline on the same compatible runtime. Each configuration completes
+the unchanged 40 questions twice. All 240 new responses are included alongside
+the original 480; the original evidence remains byte-identical.
+
+| Configuration | File MB | Document /20 | Boundary /8 | Handling /4 | Core /32 |
+|---|---:|---:|---:|---:|---:|---:|
+| Qwen3.5-0.8B Q4_K_M · refreshed | 532.5 | 19 | 7 | 2 | 28 |
+| LFM3-Omni-2B Q4_K_M · text only | 1099.6 | 20 | 6 | 2 | 28 |
+| LFM3-1.7B Q4_K_M | 1099.6 | 20 | 2 | 2 | 24 |
+
+These quality counts are the same in both runs. The text model repeats 39/40
+answers exactly; Omni and the baseline repeat 40/40. The text model produces
+14/15 cutoffs in runs 1/2, versus 2/2 for Omni and 0/0 for the baseline.
+Both LFM3 text-generation GGUFs exceed the strict 1 GB file budget. Omni's
+additional projector/audio components were not loaded and are not included in
+that file size; its speech and vision quality were not tested.
+
+**Thinking was disabled for every configuration.** The text model nevertheless
+emitted literal closing thinking markers in two answers per run and often used
+deliberation-style prose. Raw outputs are retained. Input controls and observed
+output compliance are separate; marker absence is not proof that a response
+contains no reasoning-style text. See [the new comparison notes](docs/LATEST_COMPARISON.md).
+
+The refreshed comparison uses one compatible runtime build for all three
+configurations. Use the report's comparison selector to view original or refreshed
+results; do not directly equate timings across runtime groups.
+
+## Original six-configuration comparison
 
 | Configuration | File MB | Document /20 | Boundary /8 | Handling /4 | Core /32 |
 |---|---:|---:|---:|---:|---:|
@@ -80,7 +110,7 @@ downloads, exact settings, and how to interpret new runs.
   full result and its 17 graphs, with no score changes.
 - [Frozen dataset](data/fire-safety-v1/dataset.json): exact messages, expected
   behaviors, passage provenance, and natural retrieval before stress mutations.
-- [Recorded outputs and reviews](results/reference/): all 480 responses,
+- [Recorded outputs and reviews](results/reference/): all 720 responses,
   warmups, timings, token usage, finish reasons, and hash-bound review notes.
 - [Machine-readable scorecard](results/scorecard.json) and
   [measurements CSV](results/measurements.csv).
@@ -95,12 +125,13 @@ source links need a connection.
 
 ## What the measurements establish
 
-The reference run used an Apple M3 Pro, 18 GB unified memory, Metal offload,
+The original reference run used an Apple M3 Pro, 18 GB unified memory, Metal offload,
 four CPU threads, a 4,096-token context, and at most 192 output tokens. Six model
 configurations each answered 40 questions twice. There are **40 distinct
 questions**, not 480 independent quality samples. The two repeats produced
-identical answer text per model. Twelve responses reached the output limit and
-are retained.
+identical answer text per model. Twelve original responses reached the output
+limit and are retained. The later three-configuration runtime group adds 240
+responses, 33 cutoffs, and the separately reported mode-compliance observations.
 
 The first dataset uses one 24-page U.S. home-safety booklet and 25 indexed
 passages. The questions are related and purposively chosen. Review is manual;

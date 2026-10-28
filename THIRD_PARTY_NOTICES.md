@@ -28,6 +28,10 @@ links are in `data/models.json`. Each model's use remains subject to its terms.
   and [Instruct model card](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF).
   `templates/plain_chat.jinja` is a short text-only ChatML renderer; the model
   weights retain their upstream terms.
+- LFM3: the text and Omni checkpoint repositories use the LFM Open License
+  v1.0. Its retained license text is `licenses/lfm-open-license-v1.0.txt`.
+  Native templates are retained with tools/thinking disabled; source revisions
+  and original/retained hashes are in `data/template-sources.json`.
 
 Template files are included for reproducing the measured configurations.
 Full pinned model metadata is retained; required technical repository, model,
@@ -36,7 +40,9 @@ package, and API names are intentional.
 ## Runtime and evaluation sources
 
 The reference runtime is [llama.cpp](https://github.com/ggml-org/llama.cpp),
-an external dependency, not bundled here. The generation runner uses Python's
+an external dependency, not bundled here. The refreshed LFM3 comparison uses a locally installed,
+compatible packaged llama.cpp backend, recorded by build and binary hash in
+the runtime cohort protocol; that executable is not redistributed. The runner uses Python's
 standard library. The original retrieval used MiniLM, ONNX Runtime, tokenizers,
 NumPy, and SQLite; their binaries and encoder weights are not bundled.
 

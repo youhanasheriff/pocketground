@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "scope": "LFM3 text-generation comparison and preserved original evidence",
+  "status": "Share with documented evidence limits",
+  "checks": [
+    "Official pinned GGUF file sizes and SHA256 verified for both LFM3 checkpoints; baseline weight reverified",
+    "All new model identities and 4096-token runtime context verified through the owned server",
+    "240 new returned answers retained; every distinct LFM answer reviewed; changed second-run deaf-alert response reviewed separately",
+    "All 80 refreshed baseline answers match their original answer hashes",
+    "720 raw response/review hashes, score counts, context budgets and independently interpolated timing quartiles reconciled",
+    "Original dataset, expected behaviors, execution protocol and all original answer/review files match the v0.1.0 snapshot",
+    "14 standard-library tests and JavaScript syntax checks passed",
+    "All six updated report sections rendered; desktop dark and phone light layouts inspected",
+    "Original/latest/all runtime groups, budget filter, run selector and timing subset exercised",
+    "Rendered programmatic check matched all 720 exact answer bodies and five-passage contexts",
+    "Explicit thinking-marker warnings retained; all 45 output cutoffs retained",
+    "Owned benchmark port closed after execution; existing local service still responds healthy"
+  ],
+  "observations": {
+    "new_text_core_by_run": [
+      24,
+      24
+    ],
+    "new_omni_core_by_run": [
+      28,
+      28
+    ],
+    "refreshed_baseline_core_by_run": [
+      28,
+      28
+    ],
+    "text_thinking_marker_responses_by_run": [
+      2,
+      2
+    ],
+    "text_cutoffs_by_run": [
+      14,
+      15
+    ],
+    "omni_cutoffs_by_run": [
+      2,
+      2
+    ],
+    "all_responses": 720
+  },
+  "limits": [
+    "Manual review without independent expert agreement",
+    "One document and purposive public questions",
+    "Omni evaluated only on text inputs/outputs without projector/audio codec",
+    "Both LFM3 text-generation files exceed decimal 1 GB",
+    "Thinking-off settings did not reliably prevent text-model deliberation output",
+    "Runtime cohorts differ and must stay identifiable; background application servers were left running",
+    "No headset, speech/vision, peak RAM, thermal, power or first-token measurements"
+  ]
+}

@@ -41,6 +41,11 @@ The recorded reference runtime is llama.cpp `b10964-b29c606e2`.
 Its upstream source is <https://github.com/ggml-org/llama.cpp>.
 Using a different build is a new runtime configuration; record it.
 
+That original build is not compatible with the new LFM3 checkpoints. For those
+models, use the refreshed runtime group in docs/LATEST_COMPARISON.md and rerun
+the Qwen baseline on the same compatible runtime. Keep their timings separate
+from the original group.
+
 Reference macOS/Metal command, from the project root:
 
 ```sh
@@ -134,9 +139,17 @@ python3 pocketground.py verify
 ```
 
 The builder reads the pinned `results/reference` files and writes the scorecard,
-480-row CSV, standalone viewer, and Pages entry point. It does not import your
+720-row CSV, standalone viewer, and Pages entry point. It does not import your
 development run automatically. Follow CONTRIBUTING.md to propose a new result
 without replacing the reference evidence.
 
 The report is static hosting compatible and works as a downloaded HTML file.
 Relative links to the detailed report need the accompanying folder.
+
+## LFM3-compatible runtime group
+
+The LFM3 text and Omni checkpoints require a compatible newer runtime.
+`docs/LATEST_COMPARISON.md` records the exact tested configuration, disabled
+thinking controls, observed output-mode failures, and the owned-server wrapper.
+Use its three-configuration group, including the refreshed Qwen baseline, for
+within-runtime comparisons. The original six-configuration evidence is unchanged.

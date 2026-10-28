@@ -10,5 +10,5 @@ files={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
        and not any(part in excluded for part in p.relative_to(ROOT).parts)
        and p.name not in {'manifest.json','.DS_Store'} and not p.name.startswith('.env')
        and not p.name.endswith(('.tmp','.log','.pyc'))}
-(ROOT/'manifest.json').write_text(json.dumps({'version':'0.1.0','algorithm':'sha256','sha256':files},indent=2)+'\n')
+(ROOT/'manifest.json').write_text(json.dumps({'version':(ROOT/'VERSION').read_text().strip(),'algorithm':'sha256','sha256':files},indent=2)+'\n')
 print(f'Pinned {len(files)} files. A checksum detects changes; it does not establish factual correctness.')

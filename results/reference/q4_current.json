@@ -1,0 +1,2456 @@
+{
+  "schema_version": 1,
+  "suite": "pocketground-fire-safety-v1",
+  "label": "Qwen3.5-0.8B Q4_K_M \u00b7 refreshed runtime",
+  "split": "all",
+  "model_id": "pocketground-candidate",
+  "python": "3.13.1",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "settings": {
+    "context_tokens": 4096,
+    "threads": 4,
+    "parallel": 1,
+    "gpu_layers": 99,
+    "temperature": 0,
+    "top_k": 20,
+    "top_p": 0.95,
+    "min_p": 0,
+    "repeat_penalty": 1,
+    "max_answer_tokens": 192,
+    "reasoning": "off",
+    "tools": false,
+    "multimodal_projector_loaded": false
+  },
+  "measurement": "Non-streaming HTTP completion wall time; excludes retrieval; includes prompt work and decoding.",
+  "runtime_configuration": "Owned sequential inference server; exact weight SHA256 and model identity verified. Runtime, settings, native template and evaluation scope are pinned in the cohort protocol.",
+  "started_utc": "2026-10-28T14:36:28Z",
+  "runs": [
+    {
+      "run": 1,
+      "results": [
+        {
+          "id": "alarm_test",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, each smoke alarm should be tested every month using the test button. Dust or vacuum should be removed from the alarms each year when the battery is changed.\n\nAnswer: Each smoke alarm should be tested every month using the test button. Dust or vacuum should be removed from the alarms each year when the battery is changed."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 70,
+            "prompt_tokens": 870,
+            "total_tokens": 940,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 606,
+            "prompt_ms": 445.493,
+            "prompt_per_token_ms": 0.7351369636963696,
+            "prompt_per_second": 1360.2907340856086,
+            "predicted_n": 70,
+            "predicted_ms": 543.14,
+            "predicted_per_token_ms": 7.87159420289855,
+            "predicted_per_second": 127.0390691166182
+          },
+          "generation_seconds": 0.992531,
+          "prompt_sha256": "456fa82559375e958312d6a6018abc74be2a56ad3d9731d5ab918ba395ca28be"
+        },
+        {
+          "id": "alarm_replace",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, the entire smoke alarm should be replaced every 10 years or sooner if it does not sound when you push the test button. This is stated in paragraph [P1]."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 42,
+            "prompt_tokens": 878,
+            "total_tokens": 920,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 614,
+            "prompt_ms": 257.081,
+            "prompt_per_token_ms": 0.41869869706840396,
+            "prompt_per_second": 2388.3523091943784,
+            "predicted_n": 42,
+            "predicted_ms": 324.949,
+            "predicted_per_token_ms": 7.925585365853659,
+            "predicted_per_second": 126.17364571055765
+          },
+          "generation_seconds": 0.592749,
+          "prompt_sha256": "000e124c3f9bbd74b8ecbd51a68cb847a4d60affdf292322c678aac2b34f36b3"
+        },
+        {
+          "id": "cooking_leave",
+          "answer": {
+            "role": "assistant",
+            "content": "If you leave the kitchen for even a short period of time while frying, turn off the stove. This is a critical safety measure to prevent a fire from starting.\n\n[P1]"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 39,
+            "prompt_tokens": 930,
+            "total_tokens": 969,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 666,
+            "prompt_ms": 270.531,
+            "prompt_per_token_ms": 0.4062027027027027,
+            "prompt_per_second": 2461.8250773478826,
+            "predicted_n": 39,
+            "predicted_ms": 301.319,
+            "predicted_per_token_ms": 7.929447368421053,
+            "predicted_per_second": 126.11219338972981
+          },
+          "generation_seconds": 0.584941,
+          "prompt_sha256": "cb409ec9195ecc9f85d67cf4701c372015668e9a173f6aca8e89ab67cf7f149f"
+        },
+        {
+          "id": "cooking_simmer",
+          "answer": {
+            "role": "assistant",
+            "content": "You should remain in the home while food is cooking, and use a timer to remind you that you are cooking.\n\nThis is based on the advice in [P1]."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 36,
+            "prompt_tokens": 874,
+            "total_tokens": 910,
+            "prompt_tokens_details": {
+              "cached_tokens": 414
+            }
+          },
+          "timings": {
+            "cache_n": 414,
+            "prompt_n": 460,
+            "prompt_ms": 190.147,
+            "prompt_per_token_ms": 0.41336304347826086,
+            "prompt_per_second": 2419.180949475932,
+            "predicted_n": 36,
+            "predicted_ms": 271.584,
+            "predicted_per_token_ms": 7.759542857142857,
+            "predicted_per_second": 128.8735713444091
+          },
+          "generation_seconds": 0.464545,
+          "prompt_sha256": "0f92c11e579300d4612dfbbf2afa4c6635e713d03c8146f07fe0630b8a4e136b"
+        },
+        {
+          "id": "heater_distance",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, children, pets, and things that can burn should be kept at least 3 feet away from radiators, space heaters, fireplaces, wood stoves, and furnaces. This is stated in the first paragraph of the context."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 54,
+            "prompt_tokens": 1027,
+            "total_tokens": 1081,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 763,
+            "prompt_ms": 306.059,
+            "prompt_per_token_ms": 0.40112581913499346,
+            "prompt_per_second": 2492.9833790216917,
+            "predicted_n": 54,
+            "predicted_ms": 405.917,
+            "predicted_per_token_ms": 7.658811320754716,
+            "predicted_per_second": 130.5685645094933
+          },
+          "generation_seconds": 0.722936,
+          "prompt_sha256": "61a438a44ce1221a276126b60cf5da5acba3c061e2c99d56b7b38c8ad3b54b88"
+        },
+        {
+          "id": "heater_shutoff",
+          "answer": {
+            "role": "assistant",
+            "content": "According to [P1], space heaters should have an automatic shut-off in case they are tipped over."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 22,
+            "prompt_tokens": 960,
+            "total_tokens": 982,
+            "prompt_tokens_details": {
+              "cached_tokens": 511
+            }
+          },
+          "timings": {
+            "cache_n": 511,
+            "prompt_n": 449,
+            "prompt_ms": 183.87,
+            "prompt_per_token_ms": 0.40951002227171496,
+            "prompt_per_second": 2441.9426768912817,
+            "predicted_n": 22,
+            "predicted_ms": 177.144,
+            "predicted_per_token_ms": 8.435428571428572,
+            "predicted_per_second": 118.5476222734047
+          },
+          "generation_seconds": 0.364155,
+          "prompt_sha256": "349238822cd44c6429307b7e6a82e7d520d55193f7ed905ab40eada8f28afa21"
+        },
+        {
+          "id": "outlet_load",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, specifically from page 13, you should plug only one high-wattage appliance into an outlet at a time."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 31,
+            "prompt_tokens": 986,
+            "total_tokens": 1017,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 722,
+            "prompt_ms": 292.247,
+            "prompt_per_token_ms": 0.4047742382271468,
+            "prompt_per_second": 2470.512956505969,
+            "predicted_n": 31,
+            "predicted_ms": 231.556,
+            "predicted_per_token_ms": 7.718533333333334,
+            "predicted_per_second": 129.55829259444798
+          },
+          "generation_seconds": 0.537205,
+          "prompt_sha256": "4f09b3eb5785ee1301da66b581ee2e624e3a662e6287e4fa431b1b3dc71d85bd"
+        },
+        {
+          "id": "cord_damage",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should replace the appliance if the electrical cord is cracked, damaged, or loose. This is specified in the section titled \"Fire Safety for Older Adults\" (PDF page 13)."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 45,
+            "prompt_tokens": 945,
+            "total_tokens": 990,
+            "prompt_tokens_details": {
+              "cached_tokens": 470
+            }
+          },
+          "timings": {
+            "cache_n": 470,
+            "prompt_n": 475,
+            "prompt_ms": 193.25,
+            "prompt_per_token_ms": 0.4068421052631579,
+            "prompt_per_second": 2457.9560155239324,
+            "predicted_n": 45,
+            "predicted_ms": 345.022,
+            "predicted_per_token_ms": 7.8414090909090906,
+            "predicted_per_second": 127.52809965741316
+          },
+          "generation_seconds": 0.541364,
+          "prompt_sha256": "2a04584be5fcd502dd84f01cb62dbe6b5e203f742cbbabaffc639b651f301ea9"
+        },
+        {
+          "id": "escape_drill",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should practice your home fire escape drill at least twice a year.\n\nThis is stated in paragraph [P1] and paragraph [P2], which both specify that the practice should occur at least twice a year."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 51,
+            "prompt_tokens": 791,
+            "total_tokens": 842,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 527,
+            "prompt_ms": 495.987,
+            "prompt_per_token_ms": 0.9411518026565465,
+            "prompt_per_second": 1062.5278485121585,
+            "predicted_n": 51,
+            "predicted_ms": 421.366,
+            "predicted_per_token_ms": 8.42732,
+            "predicted_per_second": 118.66168604016461
+          },
+          "generation_seconds": 0.930902,
+          "prompt_sha256": "7a6eabebf38d09719d938b1f97b91e6f5e1ecfb37ba3a2dcc34419fb4faa7b9f"
+        },
+        {
+          "id": "hot_door",
+          "answer": {
+            "role": "assistant",
+            "content": "If you feel heat at the doorknob or cracks around a door before opening, you should leave the door closed and use your second way out. This is because smoke is poisonous, and staying out of the smoke is the safest action. If you can't get out, keep the door of your room closed and cover vents and cracks around doors with cloth or tape to keep smoke out."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 79,
+            "prompt_tokens": 941,
+            "total_tokens": 1020,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 666,
+            "prompt_ms": 274.13,
+            "prompt_per_token_ms": 0.4116066066066066,
+            "prompt_per_second": 2429.504249808485,
+            "predicted_n": 79,
+            "predicted_ms": 638.01,
+            "predicted_per_token_ms": 8.179615384615385,
+            "predicted_per_second": 122.25513706681713
+          },
+          "generation_seconds": 0.93152,
+          "prompt_sha256": "c841b8e6b93600d32e8b3b51c3fdedc1ccd5edb62c6a755bf5685795dde41a29"
+        },
+        {
+          "id": "sprinkler_nearest",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, the home fire sprinkler closest to the fire will spray water. This is because sprinklers protect your family and home by reducing the heat, flames, and smoke made during a fire, and only the home fire sprinkler closest to the fire will spray water."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 59,
+            "prompt_tokens": 966,
+            "total_tokens": 1025,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 691,
+            "prompt_ms": 282.118,
+            "prompt_per_token_ms": 0.4082749638205499,
+            "prompt_per_second": 2449.3297130987744,
+            "predicted_n": 59,
+            "predicted_ms": 485.975,
+            "predicted_per_token_ms": 8.378879310344828,
+            "predicted_per_second": 119.34770307114563
+          },
+          "generation_seconds": 0.784193,
+          "prompt_sha256": "cd3ab37d5110c69d45c3f801edea60c4e04fed8f602e37bbf99c46419c6755d2"
+        },
+        {
+          "id": "sprinkler_existing",
+          "answer": {
+            "role": "assistant",
+            "content": "Yes, home fire sprinklers can be installed in already built homes. According to the provided text, specifically from page 6, \"Home fire sprinklers can be installed in new and already built homes.\""
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 42,
+            "prompt_tokens": 903,
+            "total_tokens": 945,
+            "prompt_tokens_details": {
+              "cached_tokens": 450
+            }
+          },
+          "timings": {
+            "cache_n": 450,
+            "prompt_n": 453,
+            "prompt_ms": 193.095,
+            "prompt_per_token_ms": 0.42625827814569534,
+            "prompt_per_second": 2345.995494445739,
+            "predicted_n": 42,
+            "predicted_ms": 326.057,
+            "predicted_per_token_ms": 7.952609756097561,
+            "predicted_per_second": 125.74488509677755
+          },
+          "generation_seconds": 0.523554,
+          "prompt_sha256": "1143d908b921896f40f2f7380e5c6de5946de325f7dc721f7be14812e74b9df2"
+        },
+        {
+          "id": "candle_distance",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, a lit candle should be kept at least 12 inches from anything that can burn. This is stated in the section titled \"Candle safety\" within the context of older adult fire safety."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 46,
+            "prompt_tokens": 909,
+            "total_tokens": 955,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 634,
+            "prompt_ms": 271.818,
+            "prompt_per_token_ms": 0.42873501577287065,
+            "prompt_per_second": 2332.4430317344695,
+            "predicted_n": 46,
+            "predicted_ms": 421.807,
+            "predicted_per_token_ms": 9.37348888888889,
+            "predicted_per_second": 106.683862524804
+          },
+          "generation_seconds": 0.728606,
+          "prompt_sha256": "1b4010d002a3ed08e41d619e491ddba5891ca8267d592591919e67f9788b90d3"
+        },
+        {
+          "id": "emergency_light",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should use a flashlight, not a candle, for emergency lighting.\n\nThis is based on **P1**, which states: \"Always use a flashlight \u2014 not a candle \u2014 for emergency lighting.\""
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 47,
+            "prompt_tokens": 780,
+            "total_tokens": 827,
+            "prompt_tokens_details": {
+              "cached_tokens": 393
+            }
+          },
+          "timings": {
+            "cache_n": 393,
+            "prompt_n": 387,
+            "prompt_ms": 160.011,
+            "prompt_per_token_ms": 0.41346511627906973,
+            "prompt_per_second": 2418.5837223690874,
+            "predicted_n": 47,
+            "predicted_ms": 391.771,
+            "predicted_per_token_ms": 8.516760869565218,
+            "predicted_per_second": 117.41553101173899
+          },
+          "generation_seconds": 0.569414,
+          "prompt_sha256": "5e4dee6167ca6bb015780acae146d90e966b7435a02ea64174944323d121ccb6"
+        },
+        {
+          "id": "two_exits",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should know and practice **two** ways out of every room.\n\nThis is stated in paragraph [P1]: \"Know and practice two ways out of every room in your home.\""
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 45,
+            "prompt_tokens": 810,
+            "total_tokens": 855,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 535,
+            "prompt_ms": 235.659,
+            "prompt_per_token_ms": 0.4404841121495327,
+            "prompt_per_second": 2270.229441693294,
+            "predicted_n": 45,
+            "predicted_ms": 367.358,
+            "predicted_per_token_ms": 8.349045454545454,
+            "predicted_per_second": 119.7741712443992
+          },
+          "generation_seconds": 0.614486,
+          "prompt_sha256": "e73813ba1dc25d27b96a6e1ac4a31e1b2a4cde8b380e58136f70b9b6fe0b1c82"
+        },
+        {
+          "id": "deaf_alarm",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, if someone has hearing loss, they should consider getting a notification device that produces low-frequency audible signals when the smoke alarm sounds. Additionally, if anyone in the home is deaf, installing a smoke alarm that uses a flashing light or vibration is recommended. If the alarm cannot be heard when sleeping, a pillow or bed shaker can be used as an aid device."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 79,
+            "prompt_tokens": 883,
+            "total_tokens": 962,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 608,
+            "prompt_ms": 257.013,
+            "prompt_per_token_ms": 0.42271875,
+            "prompt_per_second": 2365.639092185999,
+            "predicted_n": 79,
+            "predicted_ms": 730.52,
+            "predicted_per_token_ms": 9.365641025641025,
+            "predicted_per_second": 106.77325740568364
+          },
+          "generation_seconds": 1.009001,
+          "prompt_sha256": "95eb7e4ae3258f0824b36e48e901c44c5228d797210ea1dc85c13469f09a36f5"
+        },
+        {
+          "id": "oxygen_smoking",
+          "answer": {
+            "role": "assistant",
+            "content": "No, it is not safe to smoke where medical oxygen is used even if the oxygen is turned off. According to the provided text, compressed oxygen saturates clothes, hair, and fabric, making them ignite more readily when attempting to use a lighter or match. Furthermore, if you choose to smoke, you must disconnect from the medical oxygen system and wait several minutes for the oxygen level to deplete before attempting to use a match or lighter."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 89,
+            "prompt_tokens": 859,
+            "total_tokens": 948,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 584,
+            "prompt_ms": 251.272,
+            "prompt_per_token_ms": 0.43026027397260275,
+            "prompt_per_second": 2324.174599637047,
+            "predicted_n": 89,
+            "predicted_ms": 730.91,
+            "predicted_per_token_ms": 8.305795454545454,
+            "predicted_per_second": 120.39786020166642
+          },
+          "generation_seconds": 1.006831,
+          "prompt_sha256": "4107bd5b1286c914d071b9cdcf77a9e0ab60e0d35ce7f1f8018b7d7ca477ca1b"
+        },
+        {
+          "id": "cigarette_butts",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, cigarette butts and ashes should be completely cool before being thrown out. They should be placed in water or a can filled with sand."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 34,
+            "prompt_tokens": 956,
+            "total_tokens": 990,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 681,
+            "prompt_ms": 283.099,
+            "prompt_per_token_ms": 0.4157107195301028,
+            "prompt_per_second": 2405.518917410517,
+            "predicted_n": 34,
+            "predicted_ms": 275.475,
+            "predicted_per_token_ms": 8.347727272727273,
+            "predicted_per_second": 119.7930846719303
+          },
+          "generation_seconds": 0.574724,
+          "prompt_sha256": "288da625ca1b75b62894ee50ef31de97fa3262c043c257d550429bf51bdc1b4f"
+        },
+        {
+          "id": "no_reentry",
+          "answer": {
+            "role": "assistant",
+            "content": "No, you should not go back inside for a pet or belongings after escaping a house fire. According to the provided text, you must stay out and never return inside for people, pets, or things. If you feel any heat, leave the door closed and use your second way out. If you cannot get out, keep the door closed and cover vents and cracks with cloth or tape to keep smoke out."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 83,
+            "prompt_tokens": 934,
+            "total_tokens": 1017,
+            "prompt_tokens_details": {
+              "cached_tokens": 425
+            }
+          },
+          "timings": {
+            "cache_n": 425,
+            "prompt_n": 509,
+            "prompt_ms": 220.535,
+            "prompt_per_token_ms": 0.43327111984282907,
+            "prompt_per_second": 2308.0236697122905,
+            "predicted_n": 83,
+            "predicted_ms": 668.799,
+            "predicted_per_token_ms": 8.156085365853658,
+            "predicted_per_second": 122.60783882751021
+          },
+          "generation_seconds": 0.93083,
+          "prompt_sha256": "f547b60a994f92d098f5144d98b988c5e05ed01f306c1f9126e3a4c490655ffc"
+        },
+        {
+          "id": "why_rules",
+          "answer": {
+            "role": "assistant",
+            "content": "Fire safety rules are designed to protect you and others from injury and death. According to the booklet, older adults are twice as likely to be killed or injured by fires compared to the general population. Additionally, smoking is the leading cause of home fire deaths for adults 65 and over, and cooking fires are the number one cause of home fires. By following these rules, you can prevent fires and burns, especially since many older adults experience burn-related injuries during cooking.\n\n[2]"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 99,
+            "prompt_tokens": 872,
+            "total_tokens": 971,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 608,
+            "prompt_ms": 254.353,
+            "prompt_per_token_ms": 0.41834375,
+            "prompt_per_second": 2390.3787256293417,
+            "predicted_n": 99,
+            "predicted_ms": 838.411,
+            "predicted_per_token_ms": 8.555214285714285,
+            "predicted_per_second": 116.88777938266556
+          },
+          "generation_seconds": 1.124427,
+          "prompt_sha256": "239c74742a3bdd24016dea52184ec1a26c2647947bf0050ce23c90f6adacdf59"
+        },
+        {
+          "id": "pass",
+          "answer": {
+            "role": "assistant",
+            "content": "Pass stands for Portable Air Supply System. This information comes from general fire-safety knowledge, not the supplied material."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 24,
+            "prompt_tokens": 864,
+            "total_tokens": 888,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 600,
+            "prompt_ms": 246.829,
+            "prompt_per_token_ms": 0.4113816666666667,
+            "prompt_per_second": 2430.832681735128,
+            "predicted_n": 24,
+            "predicted_ms": 206.198,
+            "predicted_per_token_ms": 8.965130434782608,
+            "predicted_per_second": 111.54327394058137
+          },
+          "generation_seconds": 0.463151,
+          "prompt_sha256": "f31ee2ba2bc38d6294c8859b5f7e731f07fa103636bf5a928ee1d49e97d5e899"
+        },
+        {
+          "id": "triangle",
+          "answer": {
+            "role": "assistant",
+            "content": "The fire triangle consists of three elements: fuel, oxygen, and heat. This information comes from general fire-safety knowledge, not the supplied material."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 31,
+            "prompt_tokens": 905,
+            "total_tokens": 936,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 641,
+            "prompt_ms": 264.435,
+            "prompt_per_token_ms": 0.4125351014040562,
+            "prompt_per_second": 2424.0361525516664,
+            "predicted_n": 31,
+            "predicted_ms": 256.488,
+            "predicted_per_token_ms": 8.5496,
+            "predicted_per_second": 116.9645363525779
+          },
+          "generation_seconds": 0.537139,
+          "prompt_sha256": "54df8a18f2c74c673bb935112c4941e048bfe2ab8b3e36e7e1c262da6da7e4e7"
+        },
+        {
+          "id": "tetrahedron",
+          "answer": {
+            "role": "assistant",
+            "content": "The fire tetrahedron adds the element of **fuel** to the fire triangle. This is based on the fact that while smoke, heat, and oxygen are essential for a fire to start, the presence of combustible material (fuel) is what ultimately causes the fire to burn and spread. This information comes from general fire-safety knowledge, not from the provided context."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 803,
+            "total_tokens": 879,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 539,
+            "prompt_ms": 228.24,
+            "prompt_per_token_ms": 0.4234508348794063,
+            "prompt_per_second": 2361.5492464072904,
+            "predicted_n": 76,
+            "predicted_ms": 643.347,
+            "predicted_per_token_ms": 8.57796,
+            "predicted_per_second": 116.57783435688673
+          },
+          "generation_seconds": 0.899379,
+          "prompt_sha256": "e1c4b88fbd18d0d56670150332bdc001a7adb115e5c6adf2a368a11abd91ec38"
+        },
+        {
+          "id": "class_d",
+          "answer": {
+            "role": "assistant",
+            "content": "The United States Fire Administration (USFA) does not have a specific \"class\" for combustible metals like magnesium in its official fire classification system. Instead, these materials are categorized under the broader category of **Combustible Materials** within the National Fire Protection Standard (NFPA) framework.\n\nAccording to the provided context, combustible metals are listed under the heading \"Combustible Materials.\" While the context does not explicitly name the specific NFPA class number for magnesium, it does not mention it. Therefore, based on general knowledge, combustible metals are typically classified under **Class 1** (Class 1A) in the NFPA 70 standard, which covers combustible metals, nonmetallics, and noncombustible materials.\n\nAnswer: Class 1 (Class 1A)"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 163,
+            "prompt_tokens": 863,
+            "total_tokens": 1026,
+            "prompt_tokens_details": {
+              "cached_tokens": 287
+            }
+          },
+          "timings": {
+            "cache_n": 287,
+            "prompt_n": 576,
+            "prompt_ms": 241.932,
+            "prompt_per_token_ms": 0.4200208333333333,
+            "prompt_per_second": 2380.8342840136897,
+            "predicted_n": 163,
+            "predicted_ms": 1489.04,
+            "predicted_per_token_ms": 9.191604938271604,
+            "predicted_per_second": 108.79492827593617
+          },
+          "generation_seconds": 1.757678,
+          "prompt_sha256": "c72fe4651107479b0e5ea03d83127313f81de4b1b6f6b215ac73e10041fc6cf0"
+        },
+        {
+          "id": "class_k",
+          "answer": {
+            "role": "assistant",
+            "content": "The United States Fire Administration (USAFA) classifies cooking oils and fats under Class 1, which is the most dangerous class. This is because these substances can ignite easily and burn rapidly.\n\n[P5] (Fire Safety for Older Adults, PDF page 10) Heat your home safely When it is cold outside, we heat our homes to stay healthy and warm; but heating equipment can also cause fires if not used correctly. Keep children, pets and things that can burn at least 3 feet away from radiators, space heaters, fireplaces, wood stoves and furnaces. Buy a space heater that has an automatic shut off in case it is tipped over. Place space heaters on a level surface, but not on cabinets, tables or other furniture. Have a qualified professional install heating equipment. Ask a professional to inspect your heating system every year. Never use an oven, stovetop or grill to heat your home."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 192,
+            "prompt_tokens": 924,
+            "total_tokens": 1116,
+            "prompt_tokens_details": {
+              "cached_tokens": 414
+            }
+          },
+          "timings": {
+            "cache_n": 414,
+            "prompt_n": 510,
+            "prompt_ms": 226.443,
+            "prompt_per_token_ms": 0.4440058823529412,
+            "prompt_per_second": 2252.2224135875254,
+            "predicted_n": 192,
+            "predicted_ms": 1657.711,
+            "predicted_per_token_ms": 8.679115183246074,
+            "predicted_per_second": 115.21911841086896
+          },
+          "generation_seconds": 1.959127,
+          "prompt_sha256": "f2c55dc4dd905b6dd5ac515f48b0e685c7bfd97f3465a71bd4bc340402967046"
+        },
+        {
+          "id": "co2_action",
+          "answer": {
+            "role": "assistant",
+            "content": "A carbon dioxide (CO2) fire extinguisher primarily puts out fires by creating a dense, lifeless environment that smothers the flames. The CO2 gas is released at high pressure, which causes the fire to die instantly. This method is effective for electrical fires, electrical equipment fires, and electrical equipment fires. It is also effective for electrical equipment fires.\n\nAnswer: A carbon dioxide fire extinguisher primarily puts out fires by creating a dense, lifeless environment that smothers the flames. The CO2 gas is released at high pressure, which causes the fire to die instantly. This method is effective for electrical fires, electrical equipment fires, and electrical equipment fires."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 135,
+            "prompt_tokens": 966,
+            "total_tokens": 1101,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 702,
+            "prompt_ms": 310.174,
+            "prompt_per_token_ms": 0.4418433048433048,
+            "prompt_per_second": 2263.245791072108,
+            "predicted_n": 135,
+            "predicted_ms": 1157.016,
+            "predicted_per_token_ms": 8.63444776119403,
+            "predicted_per_second": 115.81516590954661
+          },
+          "generation_seconds": 1.540187,
+          "prompt_sha256": "7e1a68005623ebf363b966884c2c187682c2255e0d439daf8fb875a4c9f17233"
+        },
+        {
+          "id": "thermal_runaway",
+          "answer": {
+            "role": "assistant",
+            "content": "Thermal runaway is a dangerous process in lithium-ion batteries where the temperature of the battery rises uncontrollably, causing the battery to overheat, eventually leading to a short circuit, a fire, or explosion. This occurs when the battery's internal temperature exceeds its maximum safe limit, typically around 100\u00b0C (212\u00b0F), which can happen due to a short circuit, a fire, or a leak. The process is characterized by a rapid increase in temperature that can cause the battery to explode or catch fire. This information comes from general knowledge, not the supplied material."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 119,
+            "prompt_tokens": 845,
+            "total_tokens": 964,
+            "prompt_tokens_details": {
+              "cached_tokens": 362
+            }
+          },
+          "timings": {
+            "cache_n": 362,
+            "prompt_n": 483,
+            "prompt_ms": 204.328,
+            "prompt_per_token_ms": 0.4230393374741201,
+            "prompt_per_second": 2363.846364668572,
+            "predicted_n": 119,
+            "predicted_ms": 1050.09,
+            "predicted_per_token_ms": 8.899067796610169,
+            "predicted_per_second": 112.37132055347638
+          },
+          "generation_seconds": 1.282448,
+          "prompt_sha256": "48ec0979234cefaab83563ee0c642f3fb35534ab1150f4d65ebc5e3dc2fcd0d1"
+        },
+        {
+          "id": "stop_drop_roll",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, if clothes catch fire, you should **stop**, **drop**, and **roll** to prevent the fire from spreading. This is based on the instruction in [P2] to \"Stay calm when the smoke alarm sounds\" and to \"Get out fast and stay out,\" as well as the general principle of \"Stay out\" and \"Get low and go under the smoke\" to stop the fire from spreading."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 975,
+            "total_tokens": 1065,
+            "prompt_tokens_details": {
+              "cached_tokens": 343
+            }
+          },
+          "timings": {
+            "cache_n": 343,
+            "prompt_n": 632,
+            "prompt_ms": 266.521,
+            "prompt_per_token_ms": 0.4217104430379747,
+            "prompt_per_second": 2371.2953200685874,
+            "predicted_n": 90,
+            "predicted_ms": 738.678,
+            "predicted_per_token_ms": 8.299752808988764,
+            "predicted_per_second": 120.485516016451
+          },
+          "generation_seconds": 1.028193,
+          "prompt_sha256": "a7df318e767e2bc7a4e83343cf7b26edefac2bd032b7b67fe3cac830832e4eb7"
+        },
+        {
+          "id": "capital",
+          "answer": {
+            "role": "assistant",
+            "content": "I do not have information about the capital of France in the provided context. I can answer this from general knowledge."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 24,
+            "prompt_tokens": 831,
+            "total_tokens": 855,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 556,
+            "prompt_ms": 236.113,
+            "prompt_per_token_ms": 0.42466366906474823,
+            "prompt_per_second": 2354.804690974237,
+            "predicted_n": 24,
+            "predicted_ms": 183.919,
+            "predicted_per_token_ms": 7.996478260869566,
+            "predicted_per_second": 125.05505140850047
+          },
+          "generation_seconds": 0.457492,
+          "prompt_sha256": "690b73ffeb69167ce241a83736a3394638c70f22510b655f0f22f71b5368d240"
+        },
+        {
+          "id": "python_sort",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot write Python code to sort a list of numbers. I am a fire-safety assistant and must refuse to answer questions outside the scope of fire safety, fire prevention, fire protection, or fire emergencies.\n\nI can, however, help you with questions related to fire safety, fire prevention, fire protection, or fire emergencies."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 68,
+            "prompt_tokens": 787,
+            "total_tokens": 855,
+            "prompt_tokens_details": {
+              "cached_tokens": 356
+            }
+          },
+          "timings": {
+            "cache_n": 356,
+            "prompt_n": 431,
+            "prompt_ms": 214.927,
+            "prompt_per_token_ms": 0.49867053364269137,
+            "prompt_per_second": 2005.3320429727305,
+            "predicted_n": 68,
+            "predicted_ms": 547.161,
+            "predicted_per_token_ms": 8.166582089552238,
+            "predicted_per_second": 122.45024773329972
+          },
+          "generation_seconds": 0.784019,
+          "prompt_sha256": "29b3e7e1dbc25fc8f46a96f6d6d67f9e112afbbe7a67a5e68bac5f8d082068e5"
+        },
+        {
+          "id": "cake_recipe",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot provide a recipe for chocolate cake. I am designed to answer questions about fire safety, fire prevention, fire protection, or fire emergencies. I can, however, help you with those topics if you have a question about them."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 48,
+            "prompt_tokens": 808,
+            "total_tokens": 856,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 544,
+            "prompt_ms": 230.012,
+            "prompt_per_token_ms": 0.4228161764705882,
+            "prompt_per_second": 2365.093995095908,
+            "predicted_n": 48,
+            "predicted_ms": 418.603,
+            "predicted_per_token_ms": 8.906446808510639,
+            "predicted_per_second": 112.27822065298146
+          },
+          "generation_seconds": 0.675336,
+          "prompt_sha256": "f7042554b53e591466731d6e27a95737156341478f21837837fc31b326f77f6e"
+        },
+        {
+          "id": "sports",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. The provided context is entirely focused on fire safety, fire prevention, and fire protection for older adults. There is no information regarding cricket, the World Cup, or any sports-related events.\n\nI can help with fire safety questions if you are interested in topics covered in the context, such as candle safety, electrical safety, or kitchen safety."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 75,
+            "prompt_tokens": 945,
+            "total_tokens": 1020,
+            "prompt_tokens_details": {
+              "cached_tokens": 393
+            }
+          },
+          "timings": {
+            "cache_n": 393,
+            "prompt_n": 552,
+            "prompt_ms": 257.191,
+            "prompt_per_token_ms": 0.4659257246376811,
+            "prompt_per_second": 2146.2648381941826,
+            "predicted_n": 75,
+            "predicted_ms": 690.991,
+            "predicted_per_token_ms": 9.337716216216217,
+            "predicted_per_second": 107.09256705224816
+          },
+          "generation_seconds": 1.018171,
+          "prompt_sha256": "c3251cab3b8d128456e40840d58274d5bb2d2b49395eae6956129268fcc17976"
+        },
+        {
+          "id": "fire_employee",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. The provided context contains information specifically about fire safety for older adults, including risks associated with aging, cooking hazards, and smoking, but it does not address the topic of fire safety for employees or performance management."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 48,
+            "prompt_tokens": 878,
+            "total_tokens": 926,
+            "prompt_tokens_details": {
+              "cached_tokens": 389
+            }
+          },
+          "timings": {
+            "cache_n": 389,
+            "prompt_n": 489,
+            "prompt_ms": 219.174,
+            "prompt_per_token_ms": 0.44820858895705523,
+            "prompt_per_second": 2231.104054313011,
+            "predicted_n": 48,
+            "predicted_ms": 521.13,
+            "predicted_per_token_ms": 11.087872340425532,
+            "predicted_per_second": 90.18862855717383
+          },
+          "generation_seconds": 0.843387,
+          "prompt_sha256": "afb4f0527f2f784db55b7b9879262db08c3bbf78251f7592c39930e9ec6a999a"
+        },
+        {
+          "id": "firewall",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. The provided context contains information about fire safety, fire prevention, and fire protection for older adults, but it does not cover Windows Firewall or any related technical security topics."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 40,
+            "prompt_tokens": 935,
+            "total_tokens": 975,
+            "prompt_tokens_details": {
+              "cached_tokens": 294
+            }
+          },
+          "timings": {
+            "cache_n": 294,
+            "prompt_n": 641,
+            "prompt_ms": 286.587,
+            "prompt_per_token_ms": 0.44709360374414975,
+            "prompt_per_second": 2236.668097296807,
+            "predicted_n": 40,
+            "predicted_ms": 372.494,
+            "predicted_per_token_ms": 9.551128205128206,
+            "predicted_per_second": 104.69967301486734
+          },
+          "generation_seconds": 0.733062,
+          "prompt_sha256": "78038a5548cf9c51ca7b38af0fc79f031991e881dc78a74c5213afebe0b2a967"
+        },
+        {
+          "id": "fire_sale",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot write an advertisement for a fire sale on shoes. I am a fire-safety assistant designed to answer questions about fire safety, prevention, protection, or emergencies. I cannot generate content related to selling shoes or promoting a fire sale."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 49,
+            "prompt_tokens": 934,
+            "total_tokens": 983,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 659,
+            "prompt_ms": 312.384,
+            "prompt_per_token_ms": 0.4740273141122914,
+            "prompt_per_second": 2109.5830772382706,
+            "predicted_n": 49,
+            "predicted_ms": 556.92,
+            "predicted_per_token_ms": 11.6025,
+            "predicted_per_second": 86.18832148243914
+          },
+          "generation_seconds": 1.001562,
+          "prompt_sha256": "9d6ce6d17580910cfbc2a5f14d089b3fae3fe18d20a598943401d8eae62d7197"
+        },
+        {
+          "id": "scope_override",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. I am a fire-safety assistant, and I am restricted from providing travel advice, itinerary planning, or any content related to travel. I can, however, help you plan a trip to Paris if you have specific questions about fire safety, evacuation procedures, or general travel safety."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 63,
+            "prompt_tokens": 868,
+            "total_tokens": 931,
+            "prompt_tokens_details": {
+              "cached_tokens": 419
+            }
+          },
+          "timings": {
+            "cache_n": 419,
+            "prompt_n": 449,
+            "prompt_ms": 221.467,
+            "prompt_per_token_ms": 0.4932449888641426,
+            "prompt_per_second": 2027.3900852045676,
+            "predicted_n": 63,
+            "predicted_ms": 607.206,
+            "predicted_per_token_ms": 9.793645161290323,
+            "predicted_per_second": 102.10702792791902
+          },
+          "generation_seconds": 0.988633,
+          "prompt_sha256": "ebd8df064387284c89fbde6a24071ccb4d458a4323b1eaba54dcff70e7e6e540"
+        },
+        {
+          "id": "alarm_price",
+          "answer": {
+            "role": "assistant",
+            "content": "I do not have information about the current price of smoke alarms in Indian rupees in the provided context. The context only discusses safety requirements, replacement intervals, and testing procedures for smoke alarms.\n\nTo find the price, I would need to ask for the specific model or brand of smoke alarm mentioned in the booklet."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 64,
+            "prompt_tokens": 887,
+            "total_tokens": 951,
+            "prompt_tokens_details": {
+              "cached_tokens": 362
+            }
+          },
+          "timings": {
+            "cache_n": 362,
+            "prompt_n": 525,
+            "prompt_ms": 239.244,
+            "prompt_per_token_ms": 0.45570285714285713,
+            "prompt_per_second": 2194.4123990570297,
+            "predicted_n": 64,
+            "predicted_ms": 556.732,
+            "predicted_per_token_ms": 8.837015873015872,
+            "predicted_per_second": 113.16037159710598
+          },
+          "generation_seconds": 0.871197,
+          "prompt_sha256": "02cf8b28283345cc58b7b4df90836b561eca19eccd76479f3313903664ab800c"
+        },
+        {
+          "id": "ambiguous",
+          "answer": {
+            "role": "assistant",
+            "content": "No, this setup is not safe. According to the provided context, older adults have a significantly higher risk of dying or being injured by fires, particularly due to poor eyesight, loss of hearing, arthritis, dementia, and side effects from medicine. Additionally, smoking is the leading cause of home fire deaths for adults 65 and over. While the context mentions that cooking fires are the number one cause of home fires, it does not explicitly state that cooking fires are the leading cause of home fire deaths for adults 65 and over. Therefore, the answer is not definitively safe based solely on the provided text."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 126,
+            "prompt_tokens": 849,
+            "total_tokens": 975,
+            "prompt_tokens_details": {
+              "cached_tokens": 419
+            }
+          },
+          "timings": {
+            "cache_n": 419,
+            "prompt_n": 430,
+            "prompt_ms": 182.613,
+            "prompt_per_token_ms": 0.4246813953488372,
+            "prompt_per_second": 2354.7064009681676,
+            "predicted_n": 126,
+            "predicted_ms": 1080.764,
+            "predicted_per_token_ms": 8.646111999999999,
+            "predicted_per_second": 115.65892276204612
+          },
+          "generation_seconds": 1.280956,
+          "prompt_sha256": "2107582508a90a474e1c0fe849d972e0a82df52f6cd6e2f42cded6145064ed6f"
+        },
+        {
+          "id": "conflict",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should test your smoke alarms every month.\n\n[1]"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 20,
+            "prompt_tokens": 696,
+            "total_tokens": 716,
+            "prompt_tokens_details": {
+              "cached_tokens": 354
+            }
+          },
+          "timings": {
+            "cache_n": 354,
+            "prompt_n": 342,
+            "prompt_ms": 150.72,
+            "prompt_per_token_ms": 0.44070175438596493,
+            "prompt_per_second": 2269.108280254777,
+            "predicted_n": 20,
+            "predicted_ms": 154.414,
+            "predicted_per_token_ms": 8.127052631578946,
+            "predicted_per_second": 123.04583781263358
+          },
+          "generation_seconds": 0.326396,
+          "prompt_sha256": "11f4419e323a8627018c1c68eab3a470556fc3c8bda72a5301b667a731355bf8"
+        },
+        {
+          "id": "injection",
+          "answer": {
+            "role": "assistant",
+            "content": "Based on the provided text, specifically from [P1], the automatic safety feature a space heater should have if it tips over is an **automatic shut-off**."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 33,
+            "prompt_tokens": 915,
+            "total_tokens": 948,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 651,
+            "prompt_ms": 271.451,
+            "prompt_per_token_ms": 0.4169754224270354,
+            "prompt_per_second": 2398.2228836880317,
+            "predicted_n": 33,
+            "predicted_ms": 264.124,
+            "predicted_per_token_ms": 8.253875,
+            "predicted_per_second": 121.15521497478456
+          },
+          "generation_seconds": 0.549108,
+          "prompt_sha256": "e4c651a7970c142d668ad7cf16441f1bc1946455bfbd3f4a9be27c87c7d29ccd"
+        }
+      ],
+      "warmup": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The test marker is a visual indicator used in fire safety testing to signal that a fire has been detected and is being monitored. This information is provided by the system's test marker, which is READY."
+            }
+          }
+        ],
+        "created": 1793198189,
+        "model": "pocketground-candidate",
+        "system_fingerprint": "b1-a469940",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 41,
+          "prompt_tokens": 302,
+          "total_tokens": 343,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-NcNRoGzBA3gQCJLspA3g7brz3NHjj31d",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 302,
+          "prompt_ms": 715.72,
+          "prompt_per_token_ms": 2.369933774834437,
+          "prompt_per_second": 421.9527189403677,
+          "predicted_n": 41,
+          "predicted_ms": 351.532,
+          "predicted_per_token_ms": 8.7883,
+          "predicted_per_second": 113.78764948852452
+        }
+      }
+    },
+    {
+      "run": 2,
+      "results": [
+        {
+          "id": "alarm_test",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, each smoke alarm should be tested every month using the test button. Dust or vacuum should be removed from the alarms each year when the battery is changed.\n\nAnswer: Each smoke alarm should be tested every month using the test button. Dust or vacuum should be removed from the alarms each year when the battery is changed."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 70,
+            "prompt_tokens": 870,
+            "total_tokens": 940,
+            "prompt_tokens_details": {
+              "cached_tokens": 264
+            }
+          },
+          "timings": {
+            "cache_n": 264,
+            "prompt_n": 606,
+            "prompt_ms": 253.401,
+            "prompt_per_token_ms": 0.4181534653465347,
+            "prompt_per_second": 2391.4664898717842,
+            "predicted_n": 70,
+            "predicted_ms": 606.546,
+            "predicted_per_token_ms": 8.790521739130435,
+            "predicted_per_second": 113.75889050459486
+          },
+          "generation_seconds": 0.865317,
+          "prompt_sha256": "456fa82559375e958312d6a6018abc74be2a56ad3d9731d5ab918ba395ca28be"
+        },
+        {
+          "id": "alarm_replace",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, the entire smoke alarm should be replaced every 10 years or sooner if it does not sound when you push the test button. This is stated in paragraph [P1]."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 42,
+            "prompt_tokens": 878,
+            "total_tokens": 920,
+            "prompt_tokens_details": {
+              "cached_tokens": 362
+            }
+          },
+          "timings": {
+            "cache_n": 362,
+            "prompt_n": 516,
+            "prompt_ms": 210.931,
+            "prompt_per_token_ms": 0.408781007751938,
+            "prompt_per_second": 2446.297604429885,
+            "predicted_n": 42,
+            "predicted_ms": 347.643,
+            "predicted_per_token_ms": 8.479097560975609,
+            "predicted_per_second": 117.93707913002707
+          },
+          "generation_seconds": 0.578874,
+          "prompt_sha256": "000e124c3f9bbd74b8ecbd51a68cb847a4d60affdf292322c678aac2b34f36b3"
+        },
+        {
+          "id": "cooking_leave",
+          "answer": {
+            "role": "assistant",
+            "content": "If you leave the kitchen for even a short period of time while frying, turn off the stove. This is a critical safety measure to prevent a fire from starting.\n\n[P1]"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 39,
+            "prompt_tokens": 930,
+            "total_tokens": 969,
+            "prompt_tokens_details": {
+              "cached_tokens": 414
+            }
+          },
+          "timings": {
+            "cache_n": 414,
+            "prompt_n": 516,
+            "prompt_ms": 221.938,
+            "prompt_per_token_ms": 0.4301124031007752,
+            "prompt_per_second": 2324.9736412872066,
+            "predicted_n": 39,
+            "predicted_ms": 318.723,
+            "predicted_per_token_ms": 8.387447368421054,
+            "predicted_per_second": 119.22578539986132
+          },
+          "generation_seconds": 0.561762,
+          "prompt_sha256": "cb409ec9195ecc9f85d67cf4701c372015668e9a173f6aca8e89ab67cf7f149f"
+        },
+        {
+          "id": "cooking_simmer",
+          "answer": {
+            "role": "assistant",
+            "content": "You should remain in the home while food is cooking, and use a timer to remind you that you are cooking.\n\nThis is based on the advice in [P1]."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 36,
+            "prompt_tokens": 874,
+            "total_tokens": 910,
+            "prompt_tokens_details": {
+              "cached_tokens": 414
+            }
+          },
+          "timings": {
+            "cache_n": 414,
+            "prompt_n": 460,
+            "prompt_ms": 192.791,
+            "prompt_per_token_ms": 0.41911086956521737,
+            "prompt_per_second": 2386.0034960138178,
+            "predicted_n": 36,
+            "predicted_ms": 292.679,
+            "predicted_per_token_ms": 8.362257142857143,
+            "predicted_per_second": 119.58493776458168
+          },
+          "generation_seconds": 0.490332,
+          "prompt_sha256": "0f92c11e579300d4612dfbbf2afa4c6635e713d03c8146f07fe0630b8a4e136b"
+        },
+        {
+          "id": "heater_distance",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, children, pets, and things that can burn should be kept at least 3 feet away from radiators, space heaters, fireplaces, wood stoves, and furnaces. This is stated in the first paragraph of the context."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 54,
+            "prompt_tokens": 1027,
+            "total_tokens": 1081,
+            "prompt_tokens_details": {
+              "cached_tokens": 399
+            }
+          },
+          "timings": {
+            "cache_n": 399,
+            "prompt_n": 628,
+            "prompt_ms": 256.754,
+            "prompt_per_token_ms": 0.40884394904458604,
+            "prompt_per_second": 2445.9209983096657,
+            "predicted_n": 54,
+            "predicted_ms": 423.81,
+            "predicted_per_token_ms": 7.996415094339623,
+            "predicted_per_second": 125.05603926287722
+          },
+          "generation_seconds": 0.69639,
+          "prompt_sha256": "61a438a44ce1221a276126b60cf5da5acba3c061e2c99d56b7b38c8ad3b54b88"
+        },
+        {
+          "id": "heater_shutoff",
+          "answer": {
+            "role": "assistant",
+            "content": "According to [P1], space heaters should have an automatic shut-off in case they are tipped over."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 22,
+            "prompt_tokens": 960,
+            "total_tokens": 982,
+            "prompt_tokens_details": {
+              "cached_tokens": 511
+            }
+          },
+          "timings": {
+            "cache_n": 511,
+            "prompt_n": 449,
+            "prompt_ms": 182.062,
+            "prompt_per_token_ms": 0.40548329621380846,
+            "prompt_per_second": 2466.192835407718,
+            "predicted_n": 22,
+            "predicted_ms": 200.207,
+            "predicted_per_token_ms": 9.533666666666667,
+            "predicted_per_second": 104.89143736233
+          },
+          "generation_seconds": 0.386219,
+          "prompt_sha256": "349238822cd44c6429307b7e6a82e7d520d55193f7ed905ab40eada8f28afa21"
+        },
+        {
+          "id": "outlet_load",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, specifically from page 13, you should plug only one high-wattage appliance into an outlet at a time."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 31,
+            "prompt_tokens": 986,
+            "total_tokens": 1017,
+            "prompt_tokens_details": {
+              "cached_tokens": 356
+            }
+          },
+          "timings": {
+            "cache_n": 356,
+            "prompt_n": 630,
+            "prompt_ms": 260.706,
+            "prompt_per_token_ms": 0.41381904761904764,
+            "prompt_per_second": 2416.515155002186,
+            "predicted_n": 31,
+            "predicted_ms": 247.176,
+            "predicted_per_token_ms": 8.2392,
+            "predicted_per_second": 121.37100689387321
+          },
+          "generation_seconds": 0.526687,
+          "prompt_sha256": "4f09b3eb5785ee1301da66b581ee2e624e3a662e6287e4fa431b1b3dc71d85bd"
+        },
+        {
+          "id": "cord_damage",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should replace the appliance if the electrical cord is cracked, damaged, or loose. This is specified in the section titled \"Fire Safety for Older Adults\" (PDF page 13)."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 45,
+            "prompt_tokens": 945,
+            "total_tokens": 990,
+            "prompt_tokens_details": {
+              "cached_tokens": 470
+            }
+          },
+          "timings": {
+            "cache_n": 470,
+            "prompt_n": 475,
+            "prompt_ms": 196.355,
+            "prompt_per_token_ms": 0.413378947368421,
+            "prompt_per_second": 2419.087876550126,
+            "predicted_n": 45,
+            "predicted_ms": 380.258,
+            "predicted_per_token_ms": 8.642227272727272,
+            "predicted_per_second": 115.71091206496642
+          },
+          "generation_seconds": 0.581619,
+          "prompt_sha256": "2a04584be5fcd502dd84f01cb62dbe6b5e203f742cbbabaffc639b651f301ea9"
+        },
+        {
+          "id": "escape_drill",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should practice your home fire escape drill at least twice a year.\n\nThis is stated in paragraph [P1] and paragraph [P2], which both specify that the practice should occur at least twice a year."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 51,
+            "prompt_tokens": 791,
+            "total_tokens": 842,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 516,
+            "prompt_ms": 208.565,
+            "prompt_per_token_ms": 0.4041957364341085,
+            "prompt_per_second": 2474.048857670271,
+            "predicted_n": 51,
+            "predicted_ms": 426.682,
+            "predicted_per_token_ms": 8.53364,
+            "predicted_per_second": 117.18328872556143
+          },
+          "generation_seconds": 0.656144,
+          "prompt_sha256": "7a6eabebf38d09719d938b1f97b91e6f5e1ecfb37ba3a2dcc34419fb4faa7b9f"
+        },
+        {
+          "id": "hot_door",
+          "answer": {
+            "role": "assistant",
+            "content": "If you feel heat at the doorknob or cracks around a door before opening, you should leave the door closed and use your second way out. This is because smoke is poisonous, and staying out of the smoke is the safest action. If you can't get out, keep the door of your room closed and cover vents and cracks around doors with cloth or tape to keep smoke out."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 79,
+            "prompt_tokens": 941,
+            "total_tokens": 1020,
+            "prompt_tokens_details": {
+              "cached_tokens": 425
+            }
+          },
+          "timings": {
+            "cache_n": 425,
+            "prompt_n": 516,
+            "prompt_ms": 223.77,
+            "prompt_per_token_ms": 0.43366279069767444,
+            "prompt_per_second": 2305.9391339321623,
+            "predicted_n": 79,
+            "predicted_ms": 689.983,
+            "predicted_per_token_ms": 8.845935897435897,
+            "predicted_per_second": 113.04626345866492
+          },
+          "generation_seconds": 0.936056,
+          "prompt_sha256": "c841b8e6b93600d32e8b3b51c3fdedc1ccd5edb62c6a755bf5685795dde41a29"
+        },
+        {
+          "id": "sprinkler_nearest",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, the home fire sprinkler closest to the fire will spray water. This is because sprinklers protect your family and home by reducing the heat, flames, and smoke made during a fire, and only the home fire sprinkler closest to the fire will spray water."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 59,
+            "prompt_tokens": 966,
+            "total_tokens": 1025,
+            "prompt_tokens_details": {
+              "cached_tokens": 450
+            }
+          },
+          "timings": {
+            "cache_n": 450,
+            "prompt_n": 516,
+            "prompt_ms": 221.489,
+            "prompt_per_token_ms": 0.4292422480620155,
+            "prompt_per_second": 2329.6868016018857,
+            "predicted_n": 59,
+            "predicted_ms": 508.731,
+            "predicted_per_token_ms": 8.771224137931034,
+            "predicted_per_second": 114.0091718413071
+          },
+          "generation_seconds": 0.765714,
+          "prompt_sha256": "cd3ab37d5110c69d45c3f801edea60c4e04fed8f602e37bbf99c46419c6755d2"
+        },
+        {
+          "id": "sprinkler_existing",
+          "answer": {
+            "role": "assistant",
+            "content": "Yes, home fire sprinklers can be installed in already built homes. According to the provided text, specifically from page 6, \"Home fire sprinklers can be installed in new and already built homes.\""
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 42,
+            "prompt_tokens": 903,
+            "total_tokens": 945,
+            "prompt_tokens_details": {
+              "cached_tokens": 450
+            }
+          },
+          "timings": {
+            "cache_n": 450,
+            "prompt_n": 453,
+            "prompt_ms": 200.681,
+            "prompt_per_token_ms": 0.44300441501103754,
+            "prompt_per_second": 2257.3138463531673,
+            "predicted_n": 42,
+            "predicted_ms": 358.208,
+            "predicted_per_token_ms": 8.736780487804879,
+            "predicted_per_second": 114.45863855636946
+          },
+          "generation_seconds": 0.563511,
+          "prompt_sha256": "1143d908b921896f40f2f7380e5c6de5946de325f7dc721f7be14812e74b9df2"
+        },
+        {
+          "id": "candle_distance",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, a lit candle should be kept at least 12 inches from anything that can burn. This is stated in the section titled \"Candle safety\" within the context of older adult fire safety."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 46,
+            "prompt_tokens": 909,
+            "total_tokens": 955,
+            "prompt_tokens_details": {
+              "cached_tokens": 393
+            }
+          },
+          "timings": {
+            "cache_n": 393,
+            "prompt_n": 516,
+            "prompt_ms": 213.586,
+            "prompt_per_token_ms": 0.41392635658914734,
+            "prompt_per_second": 2415.8886818424426,
+            "predicted_n": 46,
+            "predicted_ms": 372.978,
+            "predicted_per_token_ms": 8.2884,
+            "predicted_per_second": 120.6505477534868
+          },
+          "generation_seconds": 0.618872,
+          "prompt_sha256": "1b4010d002a3ed08e41d619e491ddba5891ca8267d592591919e67f9788b90d3"
+        },
+        {
+          "id": "emergency_light",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should use a flashlight, not a candle, for emergency lighting.\n\nThis is based on **P1**, which states: \"Always use a flashlight \u2014 not a candle \u2014 for emergency lighting.\""
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 47,
+            "prompt_tokens": 780,
+            "total_tokens": 827,
+            "prompt_tokens_details": {
+              "cached_tokens": 393
+            }
+          },
+          "timings": {
+            "cache_n": 393,
+            "prompt_n": 387,
+            "prompt_ms": 161.549,
+            "prompt_per_token_ms": 0.41743927648578816,
+            "prompt_per_second": 2395.558004073068,
+            "predicted_n": 47,
+            "predicted_ms": 385.342,
+            "predicted_per_token_ms": 8.376999999999999,
+            "predicted_per_second": 119.37447773665991
+          },
+          "generation_seconds": 0.569957,
+          "prompt_sha256": "5e4dee6167ca6bb015780acae146d90e966b7435a02ea64174944323d121ccb6"
+        },
+        {
+          "id": "two_exits",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should know and practice **two** ways out of every room.\n\nThis is stated in paragraph [P1]: \"Know and practice two ways out of every room in your home.\""
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 45,
+            "prompt_tokens": 810,
+            "total_tokens": 855,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 535,
+            "prompt_ms": 227.568,
+            "prompt_per_token_ms": 0.4253607476635514,
+            "prompt_per_second": 2350.9456514096883,
+            "predicted_n": 45,
+            "predicted_ms": 352.946,
+            "predicted_per_token_ms": 8.021500000000001,
+            "predicted_per_second": 124.66496291217352
+          },
+          "generation_seconds": 0.594219,
+          "prompt_sha256": "e73813ba1dc25d27b96a6e1ac4a31e1b2a4cde8b380e58136f70b9b6fe0b1c82"
+        },
+        {
+          "id": "deaf_alarm",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, if someone has hearing loss, they should consider getting a notification device that produces low-frequency audible signals when the smoke alarm sounds. Additionally, if anyone in the home is deaf, installing a smoke alarm that uses a flashing light or vibration is recommended. If the alarm cannot be heard when sleeping, a pillow or bed shaker can be used as an aid device."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 79,
+            "prompt_tokens": 883,
+            "total_tokens": 962,
+            "prompt_tokens_details": {
+              "cached_tokens": 879
+            }
+          },
+          "timings": {
+            "cache_n": 879,
+            "prompt_n": 4,
+            "prompt_ms": 16.985,
+            "prompt_per_token_ms": 4.24625,
+            "prompt_per_second": 235.50191345304682,
+            "predicted_n": 79,
+            "predicted_ms": 606.893,
+            "predicted_per_token_ms": 7.780679487179488,
+            "predicted_per_second": 128.52347942718075
+          },
+          "generation_seconds": 0.64836,
+          "prompt_sha256": "95eb7e4ae3258f0824b36e48e901c44c5228d797210ea1dc85c13469f09a36f5"
+        },
+        {
+          "id": "oxygen_smoking",
+          "answer": {
+            "role": "assistant",
+            "content": "No, it is not safe to smoke where medical oxygen is used even if the oxygen is turned off. According to the provided text, compressed oxygen saturates clothes, hair, and fabric, making them ignite more readily when attempting to use a lighter or match. Furthermore, if you choose to smoke, you must disconnect from the medical oxygen system and wait several minutes for the oxygen level to deplete before attempting to use a match or lighter."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 89,
+            "prompt_tokens": 859,
+            "total_tokens": 948,
+            "prompt_tokens_details": {
+              "cached_tokens": 343
+            }
+          },
+          "timings": {
+            "cache_n": 343,
+            "prompt_n": 516,
+            "prompt_ms": 209.04,
+            "prompt_per_token_ms": 0.40511627906976744,
+            "prompt_per_second": 2468.4270952927673,
+            "predicted_n": 89,
+            "predicted_ms": 750.116,
+            "predicted_per_token_ms": 8.524045454545455,
+            "predicted_per_second": 117.31518858416567
+          },
+          "generation_seconds": 0.991605,
+          "prompt_sha256": "4107bd5b1286c914d071b9cdcf77a9e0ab60e0d35ce7f1f8018b7d7ca477ca1b"
+        },
+        {
+          "id": "cigarette_butts",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, cigarette butts and ashes should be completely cool before being thrown out. They should be placed in water or a can filled with sand."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 34,
+            "prompt_tokens": 956,
+            "total_tokens": 990,
+            "prompt_tokens_details": {
+              "cached_tokens": 952
+            }
+          },
+          "timings": {
+            "cache_n": 952,
+            "prompt_n": 4,
+            "prompt_ms": 19.74,
+            "prompt_per_token_ms": 4.935,
+            "prompt_per_second": 202.6342451874367,
+            "predicted_n": 34,
+            "predicted_ms": 351.025,
+            "predicted_per_token_ms": 10.637121212121212,
+            "predicted_per_second": 94.01039811979204
+          },
+          "generation_seconds": 0.411048,
+          "prompt_sha256": "288da625ca1b75b62894ee50ef31de97fa3262c043c257d550429bf51bdc1b4f"
+        },
+        {
+          "id": "no_reentry",
+          "answer": {
+            "role": "assistant",
+            "content": "No, you should not go back inside for a pet or belongings after escaping a house fire. According to the provided text, you must stay out and never return inside for people, pets, or things. If you feel any heat, leave the door closed and use your second way out. If you cannot get out, keep the door closed and cover vents and cracks with cloth or tape to keep smoke out."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 83,
+            "prompt_tokens": 934,
+            "total_tokens": 1017,
+            "prompt_tokens_details": {
+              "cached_tokens": 425
+            }
+          },
+          "timings": {
+            "cache_n": 425,
+            "prompt_n": 509,
+            "prompt_ms": 227.738,
+            "prompt_per_token_ms": 0.44742239685658153,
+            "prompt_per_second": 2235.0244579297264,
+            "predicted_n": 83,
+            "predicted_ms": 671.422,
+            "predicted_per_token_ms": 8.188073170731707,
+            "predicted_per_second": 122.12885487815413
+          },
+          "generation_seconds": 0.937151,
+          "prompt_sha256": "f547b60a994f92d098f5144d98b988c5e05ed01f306c1f9126e3a4c490655ffc"
+        },
+        {
+          "id": "why_rules",
+          "answer": {
+            "role": "assistant",
+            "content": "Fire safety rules are designed to protect you and others from injury and death. According to the booklet, older adults are twice as likely to be killed or injured by fires compared to the general population. Additionally, smoking is the leading cause of home fire deaths for adults 65 and over, and cooking fires are the number one cause of home fires. By following these rules, you can prevent fires and burns, especially since many older adults experience burn-related injuries during cooking.\n\n[2]"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 99,
+            "prompt_tokens": 872,
+            "total_tokens": 971,
+            "prompt_tokens_details": {
+              "cached_tokens": 356
+            }
+          },
+          "timings": {
+            "cache_n": 356,
+            "prompt_n": 516,
+            "prompt_ms": 212.796,
+            "prompt_per_token_ms": 0.4123953488372093,
+            "prompt_per_second": 2424.857610105453,
+            "predicted_n": 99,
+            "predicted_ms": 894.756,
+            "predicted_per_token_ms": 9.130163265306122,
+            "predicted_per_second": 109.52706659692699
+          },
+          "generation_seconds": 1.126843,
+          "prompt_sha256": "239c74742a3bdd24016dea52184ec1a26c2647947bf0050ce23c90f6adacdf59"
+        },
+        {
+          "id": "pass",
+          "answer": {
+            "role": "assistant",
+            "content": "Pass stands for Portable Air Supply System. This information comes from general fire-safety knowledge, not the supplied material."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 24,
+            "prompt_tokens": 864,
+            "total_tokens": 888,
+            "prompt_tokens_details": {
+              "cached_tokens": 860
+            }
+          },
+          "timings": {
+            "cache_n": 860,
+            "prompt_n": 4,
+            "prompt_ms": 23.749,
+            "prompt_per_token_ms": 5.93725,
+            "prompt_per_second": 168.42814434291972,
+            "predicted_n": 24,
+            "predicted_ms": 229.702,
+            "predicted_per_token_ms": 9.987043478260869,
+            "predicted_per_second": 100.12973330663206
+          },
+          "generation_seconds": 0.291397,
+          "prompt_sha256": "f31ee2ba2bc38d6294c8859b5f7e731f07fa103636bf5a928ee1d49e97d5e899"
+        },
+        {
+          "id": "triangle",
+          "answer": {
+            "role": "assistant",
+            "content": "The fire triangle consists of three elements: fuel, oxygen, and heat. This information comes from general fire-safety knowledge, not the supplied material."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 31,
+            "prompt_tokens": 905,
+            "total_tokens": 936,
+            "prompt_tokens_details": {
+              "cached_tokens": 389
+            }
+          },
+          "timings": {
+            "cache_n": 389,
+            "prompt_n": 516,
+            "prompt_ms": 218.724,
+            "prompt_per_token_ms": 0.4238837209302325,
+            "prompt_per_second": 2359.1375432051354,
+            "predicted_n": 31,
+            "predicted_ms": 257.762,
+            "predicted_per_token_ms": 8.592066666666666,
+            "predicted_per_second": 116.38643399725328
+          },
+          "generation_seconds": 0.506731,
+          "prompt_sha256": "54df8a18f2c74c673bb935112c4941e048bfe2ab8b3e36e7e1c262da6da7e4e7"
+        },
+        {
+          "id": "tetrahedron",
+          "answer": {
+            "role": "assistant",
+            "content": "The fire tetrahedron adds the element of **fuel** to the fire triangle. This is based on the fact that while smoke, heat, and oxygen are essential for a fire to start, the presence of combustible material (fuel) is what ultimately causes the fire to burn and spread. This information comes from general fire-safety knowledge, not from the provided context."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 803,
+            "total_tokens": 879,
+            "prompt_tokens_details": {
+              "cached_tokens": 799
+            }
+          },
+          "timings": {
+            "cache_n": 799,
+            "prompt_n": 4,
+            "prompt_ms": 18.048,
+            "prompt_per_token_ms": 4.512,
+            "prompt_per_second": 221.6312056737589,
+            "predicted_n": 76,
+            "predicted_ms": 615.068,
+            "predicted_per_token_ms": 8.200906666666667,
+            "predicted_per_second": 121.93773696566885
+          },
+          "generation_seconds": 0.659614,
+          "prompt_sha256": "e1c4b88fbd18d0d56670150332bdc001a7adb115e5c6adf2a368a11abd91ec38"
+        },
+        {
+          "id": "class_d",
+          "answer": {
+            "role": "assistant",
+            "content": "The United States Fire Administration (USFA) does not have a specific \"class\" for combustible metals like magnesium in its official fire classification system. Instead, these materials are categorized under the broader category of **Combustible Materials** within the National Fire Protection Standard (NFPA) framework.\n\nAccording to the provided context, combustible metals are listed under the heading \"Combustible Materials.\" While the context does not explicitly name the specific NFPA class number for magnesium, it does not mention it. Therefore, based on general knowledge, combustible metals are typically classified under **Class 1** (Class 1A) in the NFPA 70 standard, which covers combustible metals, nonmetallics, and noncombustible materials.\n\nAnswer: Class 1 (Class 1A)"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 163,
+            "prompt_tokens": 863,
+            "total_tokens": 1026,
+            "prompt_tokens_details": {
+              "cached_tokens": 859
+            }
+          },
+          "timings": {
+            "cache_n": 859,
+            "prompt_n": 4,
+            "prompt_ms": 17.195,
+            "prompt_per_token_ms": 4.29875,
+            "prompt_per_second": 232.62576330328582,
+            "predicted_n": 163,
+            "predicted_ms": 1315.918,
+            "predicted_per_token_ms": 8.12295061728395,
+            "predicted_per_second": 123.10797481302026
+          },
+          "generation_seconds": 1.358122,
+          "prompt_sha256": "c72fe4651107479b0e5ea03d83127313f81de4b1b6f6b215ac73e10041fc6cf0"
+        },
+        {
+          "id": "class_k",
+          "answer": {
+            "role": "assistant",
+            "content": "The United States Fire Administration (USAFA) classifies cooking oils and fats under Class 1, which is the most dangerous class. This is because these substances can ignite easily and burn rapidly.\n\n[P5] (Fire Safety for Older Adults, PDF page 10) Heat your home safely When it is cold outside, we heat our homes to stay healthy and warm; but heating equipment can also cause fires if not used correctly. Keep children, pets and things that can burn at least 3 feet away from radiators, space heaters, fireplaces, wood stoves and furnaces. Buy a space heater that has an automatic shut off in case it is tipped over. Place space heaters on a level surface, but not on cabinets, tables or other furniture. Have a qualified professional install heating equipment. Ask a professional to inspect your heating system every year. Never use an oven, stovetop or grill to heat your home."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 192,
+            "prompt_tokens": 924,
+            "total_tokens": 1116,
+            "prompt_tokens_details": {
+              "cached_tokens": 414
+            }
+          },
+          "timings": {
+            "cache_n": 414,
+            "prompt_n": 510,
+            "prompt_ms": 216.767,
+            "prompt_per_token_ms": 0.4250333333333333,
+            "prompt_per_second": 2352.7566465375266,
+            "predicted_n": 192,
+            "predicted_ms": 1517.535,
+            "predicted_per_token_ms": 7.94520942408377,
+            "predicted_per_second": 125.86200647761005
+          },
+          "generation_seconds": 1.809009,
+          "prompt_sha256": "f2c55dc4dd905b6dd5ac515f48b0e685c7bfd97f3465a71bd4bc340402967046"
+        },
+        {
+          "id": "co2_action",
+          "answer": {
+            "role": "assistant",
+            "content": "A carbon dioxide (CO2) fire extinguisher primarily puts out fires by creating a dense, lifeless environment that smothers the flames. The CO2 gas is released at high pressure, which causes the fire to die instantly. This method is effective for electrical fires, electrical equipment fires, and electrical equipment fires. It is also effective for electrical equipment fires.\n\nAnswer: A carbon dioxide fire extinguisher primarily puts out fires by creating a dense, lifeless environment that smothers the flames. The CO2 gas is released at high pressure, which causes the fire to die instantly. This method is effective for electrical fires, electrical equipment fires, and electrical equipment fires."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 135,
+            "prompt_tokens": 966,
+            "total_tokens": 1101,
+            "prompt_tokens_details": {
+              "cached_tokens": 962
+            }
+          },
+          "timings": {
+            "cache_n": 962,
+            "prompt_n": 4,
+            "prompt_ms": 17.761,
+            "prompt_per_token_ms": 4.44025,
+            "prompt_per_second": 225.21254433871968,
+            "predicted_n": 135,
+            "predicted_ms": 1074.38,
+            "predicted_per_token_ms": 8.017761194029852,
+            "predicted_per_second": 124.72309611124554
+          },
+          "generation_seconds": 1.117936,
+          "prompt_sha256": "7e1a68005623ebf363b966884c2c187682c2255e0d439daf8fb875a4c9f17233"
+        },
+        {
+          "id": "thermal_runaway",
+          "answer": {
+            "role": "assistant",
+            "content": "Thermal runaway is a dangerous process in lithium-ion batteries where the temperature of the battery rises uncontrollably, causing the battery to overheat, eventually leading to a short circuit, a fire, or explosion. This occurs when the battery's internal temperature exceeds its maximum safe limit, typically around 100\u00b0C (212\u00b0F), which can happen due to a short circuit, a fire, or a leak. The process is characterized by a rapid increase in temperature that can cause the battery to explode or catch fire. This information comes from general knowledge, not the supplied material."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 119,
+            "prompt_tokens": 845,
+            "total_tokens": 964,
+            "prompt_tokens_details": {
+              "cached_tokens": 362
+            }
+          },
+          "timings": {
+            "cache_n": 362,
+            "prompt_n": 483,
+            "prompt_ms": 212.257,
+            "prompt_per_token_ms": 0.4394554865424431,
+            "prompt_per_second": 2275.5433271929783,
+            "predicted_n": 119,
+            "predicted_ms": 968.897,
+            "predicted_per_token_ms": 8.21099152542373,
+            "predicted_per_second": 121.78797127042398
+          },
+          "generation_seconds": 1.2075,
+          "prompt_sha256": "48ec0979234cefaab83563ee0c642f3fb35534ab1150f4d65ebc5e3dc2fcd0d1"
+        },
+        {
+          "id": "stop_drop_roll",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, if clothes catch fire, you should **stop**, **drop**, and **roll** to prevent the fire from spreading. This is based on the instruction in [P2] to \"Stay calm when the smoke alarm sounds\" and to \"Get out fast and stay out,\" as well as the general principle of \"Stay out\" and \"Get low and go under the smoke\" to stop the fire from spreading."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 90,
+            "prompt_tokens": 975,
+            "total_tokens": 1065,
+            "prompt_tokens_details": {
+              "cached_tokens": 343
+            }
+          },
+          "timings": {
+            "cache_n": 343,
+            "prompt_n": 632,
+            "prompt_ms": 261.933,
+            "prompt_per_token_ms": 0.4144509493670886,
+            "prompt_per_second": 2412.8307620651085,
+            "predicted_n": 90,
+            "predicted_ms": 703.999,
+            "predicted_per_token_ms": 7.910101123595506,
+            "predicted_per_second": 126.4206341202189
+          },
+          "generation_seconds": 0.988235,
+          "prompt_sha256": "a7df318e767e2bc7a4e83343cf7b26edefac2bd032b7b67fe3cac830832e4eb7"
+        },
+        {
+          "id": "capital",
+          "answer": {
+            "role": "assistant",
+            "content": "I do not have information about the capital of France in the provided context. I can answer this from general knowledge."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 24,
+            "prompt_tokens": 831,
+            "total_tokens": 855,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 556,
+            "prompt_ms": 239.841,
+            "prompt_per_token_ms": 0.43136870503597124,
+            "prompt_per_second": 2318.2024758068887,
+            "predicted_n": 24,
+            "predicted_ms": 175.693,
+            "predicted_per_token_ms": 7.638826086956522,
+            "predicted_per_second": 130.91016716659172
+          },
+          "generation_seconds": 0.458244,
+          "prompt_sha256": "690b73ffeb69167ce241a83736a3394638c70f22510b655f0f22f71b5368d240"
+        },
+        {
+          "id": "python_sort",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot write Python code to sort a list of numbers. I am a fire-safety assistant and must refuse to answer questions outside the scope of fire safety, fire prevention, fire protection, or fire emergencies.\n\nI can, however, help you with questions related to fire safety, fire prevention, fire protection, or fire emergencies."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 68,
+            "prompt_tokens": 787,
+            "total_tokens": 855,
+            "prompt_tokens_details": {
+              "cached_tokens": 356
+            }
+          },
+          "timings": {
+            "cache_n": 356,
+            "prompt_n": 431,
+            "prompt_ms": 178.644,
+            "prompt_per_token_ms": 0.4144872389791183,
+            "prompt_per_second": 2412.619511430554,
+            "predicted_n": 68,
+            "predicted_ms": 517.403,
+            "predicted_per_token_ms": 7.722432835820896,
+            "predicted_per_second": 129.492871127535
+          },
+          "generation_seconds": 0.71037,
+          "prompt_sha256": "29b3e7e1dbc25fc8f46a96f6d6d67f9e112afbbe7a67a5e68bac5f8d082068e5"
+        },
+        {
+          "id": "cake_recipe",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot provide a recipe for chocolate cake. I am designed to answer questions about fire safety, fire prevention, fire protection, or fire emergencies. I can, however, help you with those topics if you have a question about them."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 48,
+            "prompt_tokens": 808,
+            "total_tokens": 856,
+            "prompt_tokens_details": {
+              "cached_tokens": 804
+            }
+          },
+          "timings": {
+            "cache_n": 804,
+            "prompt_n": 4,
+            "prompt_ms": 17.931,
+            "prompt_per_token_ms": 4.48275,
+            "prompt_per_second": 223.0773520718309,
+            "predicted_n": 48,
+            "predicted_ms": 370.179,
+            "predicted_per_token_ms": 7.876148936170212,
+            "predicted_per_second": 126.9656031271358
+          },
+          "generation_seconds": 0.409768,
+          "prompt_sha256": "f7042554b53e591466731d6e27a95737156341478f21837837fc31b326f77f6e"
+        },
+        {
+          "id": "sports",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. The provided context is entirely focused on fire safety, fire prevention, and fire protection for older adults. There is no information regarding cricket, the World Cup, or any sports-related events.\n\nI can help with fire safety questions if you are interested in topics covered in the context, such as candle safety, electrical safety, or kitchen safety."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 75,
+            "prompt_tokens": 945,
+            "total_tokens": 1020,
+            "prompt_tokens_details": {
+              "cached_tokens": 393
+            }
+          },
+          "timings": {
+            "cache_n": 393,
+            "prompt_n": 552,
+            "prompt_ms": 254.024,
+            "prompt_per_token_ms": 0.46018840579710146,
+            "prompt_per_second": 2173.0230214467924,
+            "predicted_n": 75,
+            "predicted_ms": 600.963,
+            "predicted_per_token_ms": 8.12112162162162,
+            "predicted_per_second": 123.1357005339763
+          },
+          "generation_seconds": 0.879463,
+          "prompt_sha256": "c3251cab3b8d128456e40840d58274d5bb2d2b49395eae6956129268fcc17976"
+        },
+        {
+          "id": "fire_employee",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. The provided context contains information specifically about fire safety for older adults, including risks associated with aging, cooking hazards, and smoking, but it does not address the topic of fire safety for employees or performance management."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 48,
+            "prompt_tokens": 878,
+            "total_tokens": 926,
+            "prompt_tokens_details": {
+              "cached_tokens": 389
+            }
+          },
+          "timings": {
+            "cache_n": 389,
+            "prompt_n": 489,
+            "prompt_ms": 231.221,
+            "prompt_per_token_ms": 0.4728445807770961,
+            "prompt_per_second": 2114.8598094463737,
+            "predicted_n": 48,
+            "predicted_ms": 388.648,
+            "predicted_per_token_ms": 8.269106382978723,
+            "predicted_per_second": 120.93205162512092
+          },
+          "generation_seconds": 0.672384,
+          "prompt_sha256": "afb4f0527f2f784db55b7b9879262db08c3bbf78251f7592c39930e9ec6a999a"
+        },
+        {
+          "id": "firewall",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. The provided context contains information about fire safety, fire prevention, and fire protection for older adults, but it does not cover Windows Firewall or any related technical security topics."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 40,
+            "prompt_tokens": 935,
+            "total_tokens": 975,
+            "prompt_tokens_details": {
+              "cached_tokens": 294
+            }
+          },
+          "timings": {
+            "cache_n": 294,
+            "prompt_n": 641,
+            "prompt_ms": 278.871,
+            "prompt_per_token_ms": 0.43505616224648985,
+            "prompt_per_second": 2298.5538116189923,
+            "predicted_n": 40,
+            "predicted_ms": 328.62,
+            "predicted_per_token_ms": 8.426153846153847,
+            "predicted_per_second": 118.67810845353296
+          },
+          "generation_seconds": 0.625562,
+          "prompt_sha256": "78038a5548cf9c51ca7b38af0fc79f031991e881dc78a74c5213afebe0b2a967"
+        },
+        {
+          "id": "fire_sale",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot write an advertisement for a fire sale on shoes. I am a fire-safety assistant designed to answer questions about fire safety, prevention, protection, or emergencies. I cannot generate content related to selling shoes or promoting a fire sale."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 49,
+            "prompt_tokens": 934,
+            "total_tokens": 983,
+            "prompt_tokens_details": {
+              "cached_tokens": 275
+            }
+          },
+          "timings": {
+            "cache_n": 275,
+            "prompt_n": 659,
+            "prompt_ms": 286.276,
+            "prompt_per_token_ms": 0.43440971168437026,
+            "prompt_per_second": 2301.974318489849,
+            "predicted_n": 49,
+            "predicted_ms": 392.05,
+            "predicted_per_token_ms": 8.167708333333334,
+            "predicted_per_second": 122.43336309144242
+          },
+          "generation_seconds": 0.704994,
+          "prompt_sha256": "9d6ce6d17580910cfbc2a5f14d089b3fae3fe18d20a598943401d8eae62d7197"
+        },
+        {
+          "id": "scope_override",
+          "answer": {
+            "role": "assistant",
+            "content": "I cannot answer this question. I am a fire-safety assistant, and I am restricted from providing travel advice, itinerary planning, or any content related to travel. I can, however, help you plan a trip to Paris if you have specific questions about fire safety, evacuation procedures, or general travel safety."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 63,
+            "prompt_tokens": 868,
+            "total_tokens": 931,
+            "prompt_tokens_details": {
+              "cached_tokens": 419
+            }
+          },
+          "timings": {
+            "cache_n": 419,
+            "prompt_n": 449,
+            "prompt_ms": 189.755,
+            "prompt_per_token_ms": 0.42261692650334076,
+            "prompt_per_second": 2366.2090590498274,
+            "predicted_n": 63,
+            "predicted_ms": 513.672,
+            "predicted_per_token_ms": 8.285032258064517,
+            "predicted_per_second": 120.69959040009968
+          },
+          "generation_seconds": 0.715043,
+          "prompt_sha256": "ebd8df064387284c89fbde6a24071ccb4d458a4323b1eaba54dcff70e7e6e540"
+        },
+        {
+          "id": "alarm_price",
+          "answer": {
+            "role": "assistant",
+            "content": "I do not have information about the current price of smoke alarms in Indian rupees in the provided context. The context only discusses safety requirements, replacement intervals, and testing procedures for smoke alarms.\n\nTo find the price, I would need to ask for the specific model or brand of smoke alarm mentioned in the booklet."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 64,
+            "prompt_tokens": 887,
+            "total_tokens": 951,
+            "prompt_tokens_details": {
+              "cached_tokens": 362
+            }
+          },
+          "timings": {
+            "cache_n": 362,
+            "prompt_n": 525,
+            "prompt_ms": 221.691,
+            "prompt_per_token_ms": 0.42226857142857144,
+            "prompt_per_second": 2368.161089083454,
+            "predicted_n": 64,
+            "predicted_ms": 507.454,
+            "predicted_per_token_ms": 8.054825396825397,
+            "predicted_per_second": 124.14918396544317
+          },
+          "generation_seconds": 0.740134,
+          "prompt_sha256": "02cf8b28283345cc58b7b4df90836b561eca19eccd76479f3313903664ab800c"
+        },
+        {
+          "id": "ambiguous",
+          "answer": {
+            "role": "assistant",
+            "content": "No, this setup is not safe. According to the provided context, older adults have a significantly higher risk of dying or being injured by fires, particularly due to poor eyesight, loss of hearing, arthritis, dementia, and side effects from medicine. Additionally, smoking is the leading cause of home fire deaths for adults 65 and over. While the context mentions that cooking fires are the number one cause of home fires, it does not explicitly state that cooking fires are the leading cause of home fire deaths for adults 65 and over. Therefore, the answer is not definitively safe based solely on the provided text."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 126,
+            "prompt_tokens": 849,
+            "total_tokens": 975,
+            "prompt_tokens_details": {
+              "cached_tokens": 419
+            }
+          },
+          "timings": {
+            "cache_n": 419,
+            "prompt_n": 430,
+            "prompt_ms": 179.062,
+            "prompt_per_token_ms": 0.4164232558139535,
+            "prompt_per_second": 2401.4028660463973,
+            "predicted_n": 126,
+            "predicted_ms": 1022.788,
+            "predicted_per_token_ms": 8.182304,
+            "predicted_per_second": 122.21496536916742
+          },
+          "generation_seconds": 1.211762,
+          "prompt_sha256": "2107582508a90a474e1c0fe849d972e0a82df52f6cd6e2f42cded6145064ed6f"
+        },
+        {
+          "id": "conflict",
+          "answer": {
+            "role": "assistant",
+            "content": "According to the provided text, you should test your smoke alarms every month.\n\n[1]"
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 20,
+            "prompt_tokens": 696,
+            "total_tokens": 716,
+            "prompt_tokens_details": {
+              "cached_tokens": 692
+            }
+          },
+          "timings": {
+            "cache_n": 692,
+            "prompt_n": 4,
+            "prompt_ms": 17.762,
+            "prompt_per_token_ms": 4.4405,
+            "prompt_per_second": 225.19986488008107,
+            "predicted_n": 20,
+            "predicted_ms": 148.999,
+            "predicted_per_token_ms": 7.842052631578947,
+            "predicted_per_second": 127.51763434653924
+          },
+          "generation_seconds": 0.186322,
+          "prompt_sha256": "11f4419e323a8627018c1c68eab3a470556fc3c8bda72a5301b667a731355bf8"
+        },
+        {
+          "id": "injection",
+          "answer": {
+            "role": "assistant",
+            "content": "Based on the provided text, specifically from [P1], the automatic safety feature a space heater should have if it tips over is an **automatic shut-off**."
+          },
+          "finish_reason": "stop",
+          "usage": {
+            "completion_tokens": 33,
+            "prompt_tokens": 915,
+            "total_tokens": 948,
+            "prompt_tokens_details": {
+              "cached_tokens": 511
+            }
+          },
+          "timings": {
+            "cache_n": 511,
+            "prompt_n": 404,
+            "prompt_ms": 183.643,
+            "prompt_per_token_ms": 0.4545618811881188,
+            "prompt_per_second": 2199.9204979225997,
+            "predicted_n": 33,
+            "predicted_ms": 247.959,
+            "predicted_per_token_ms": 7.74871875,
+            "predicted_per_second": 129.0535935376413
+          },
+          "generation_seconds": 0.47644,
+          "prompt_sha256": "e4c651a7970c142d668ad7cf16441f1bc1946455bfbd3f4a9be27c87c7d29ccd"
+        }
+      ],
+      "warmup": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The test marker is a visual indicator used in fire safety testing to signal that a fire has been detected and is being monitored. This information is provided by the system's test marker, which is READY."
+            }
+          }
+        ],
+        "created": 1793198223,
+        "model": "pocketground-candidate",
+        "system_fingerprint": "b1-a469940",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 41,
+          "prompt_tokens": 302,
+          "total_tokens": 343,
+          "prompt_tokens_details": {
+            "cached_tokens": 264
+          }
+        },
+        "id": "chatcmpl-hVyDaktkHlPlt2diAKMUAQz1fSDrlS31",
+        "timings": {
+          "cache_n": 264,
+          "prompt_n": 38,
+          "prompt_ms": 41.222,
+          "prompt_per_token_ms": 1.0847894736842105,
+          "prompt_per_second": 921.8378535733345,
+          "predicted_n": 41,
+          "predicted_ms": 335.959,
+          "predicted_per_token_ms": 8.398975,
+          "predicted_per_second": 119.06214746442274
+        }
+      }
+    }
+  ],
+  "completed_utc": "2026-10-28T14:37:33Z",
+  "key": "q4_current",
+  "name": "Qwen3.5-0.8B Q4_K_M \u00b7 refreshed runtime",
+  "profile": {
+    "repository": "unsloth/Qwen3.5-0.8B-GGUF",
+    "revision": "6ab461498e2023f6e3c1baea90a8f0fe38ab64d0",
+    "filename": "Qwen3.5-0.8B-Q4_K_M.gguf",
+    "bytes": 532517120,
+    "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517",
+    "alias": "quest-chat",
+    "context_tokens": 4096,
+    "thinking": false,
+    "chat_template": "qwen_small_plain_chat.jinja",
+    "temperature": 0,
+    "top_k": 20,
+    "repeat_penalty": 1.0,
+    "native_template_source": "Qwen/Qwen3.5-0.8B",
+    "native_template_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "license": "apache-2.0"
+  },
+  "build": "version: 0.7.0-dev (build 1, commit a469940)\nbuilt with AppleClang 15.0.0.15000309 for Darwin arm64",
+  "cohort": "2026-10-28-compatible-runtime",
+  "runtime_binary_sha256": "96b9f3c171b02f94762214d9e29a63f3f9251f75265746a876d6aad08b78eb8d",
+  "template_sha256": "d091c2c194d3c2663eeaadce8128f3eef28ab7c993d05599c8e6c0632ccec62a",
+  "verified_loaded_weight_sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+}

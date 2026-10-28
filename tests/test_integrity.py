@@ -82,4 +82,22 @@ class EvidenceIntegrity(unittest.TestCase):
                 self.assertEqual(sent.get_header('Authorization'),'Bearer test-only-value')
                 self.assertNotIn(b'test-only-value',sent.data)
 
+    def test_new_checkpoint_reviews_are_bound_to_every_returned_answer(self):
+        for key,expected in [('q4_current',28),('lfm3_text',24),('lfm3_omni',28)]:
+            raw=read(ROOT/f'results/reference/{key}.json')
+            reviewed=read(ROOT/f'results/reference/{key}.review.json')
+            result=score(self.dataset,raw,reviewed)
+            self.assertEqual([r['core_passed'] for r in result['runs']],[expected,expected])
+            self.assertEqual([len(r['results']) for r in raw['runs']],[40,40])
+
+    def test_original_snapshot_is_not_changed_by_new_comparisons(self):
+        for filename,expected in read(ROOT/'data/original-snapshot.json')['unchanged_files'].items():
+            self.assertEqual(hashlib.sha256((ROOT/filename).read_bytes()).hexdigest(),expected)
+
+    def test_streamed_weight_hash_matches_standard_digest(self):
+        from run_local_models import file_sha256
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'weights.bin';p.write_bytes(b'pin this exact weight file'*900000)
+            self.assertEqual(file_sha256(p),hashlib.sha256(p.read_bytes()).hexdigest())
+
 if __name__=='__main__':unittest.main()

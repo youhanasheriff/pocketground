@@ -1,16 +1,18 @@
 {
   "benchmark": "PocketGround",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dataset": "pocketground-fire-safety-v1",
   "core": 32,
   "supplement": 8,
-  "responses": 480,
+  "responses": 720,
   "models": [
     {
       "key": "q4",
       "name": "Qwen3.5-0.8B Q4_K_M",
+      "cohort": "2026-10-27-original",
       "bytes": 532517120,
       "budget_eligible": true,
+      "same_answers": 40,
       "runs": [
         {
           "run": 1,
@@ -62,7 +64,9 @@
           },
           "length_cutoffs": 0,
           "book_citation_presence": 6,
-          "knowledge_disclosure": 4
+          "knowledge_disclosure": 4,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         },
         {
           "run": 2,
@@ -114,15 +118,19 @@
           },
           "length_cutoffs": 0,
           "book_citation_presence": 6,
-          "knowledge_disclosure": 4
+          "knowledge_disclosure": 4,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         }
       ]
     },
     {
       "key": "q8",
       "name": "Qwen3.5-0.8B Q8_0",
+      "cohort": "2026-10-27-original",
       "bytes": 811843840,
       "budget_eligible": true,
+      "same_answers": 40,
       "runs": [
         {
           "run": 1,
@@ -174,7 +182,9 @@
           },
           "length_cutoffs": 1,
           "book_citation_presence": 4,
-          "knowledge_disclosure": 7
+          "knowledge_disclosure": 7,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         },
         {
           "run": 2,
@@ -226,15 +236,19 @@
           },
           "length_cutoffs": 1,
           "book_citation_presence": 4,
-          "knowledge_disclosure": 7
+          "knowledge_disclosure": 7,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         }
       ]
     },
     {
       "key": "qwen2",
       "name": "Qwen3.5-2B Q4_K_M",
+      "cohort": "2026-10-27-original",
       "bytes": 1280835840,
       "budget_eligible": false,
+      "same_answers": 40,
       "runs": [
         {
           "run": 1,
@@ -286,7 +300,9 @@
           },
           "length_cutoffs": 1,
           "book_citation_presence": 18,
-          "knowledge_disclosure": 8
+          "knowledge_disclosure": 8,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         },
         {
           "run": 2,
@@ -338,15 +354,19 @@
           },
           "length_cutoffs": 1,
           "book_citation_presence": 18,
-          "knowledge_disclosure": 8
+          "knowledge_disclosure": 8,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         }
       ]
     },
     {
       "key": "lfmrag",
       "name": "LFM2-1.2B-RAG Q4_K_M",
+      "cohort": "2026-10-27-original",
       "bytes": 730894048,
       "budget_eligible": true,
+      "same_answers": 40,
       "runs": [
         {
           "run": 1,
@@ -398,7 +418,9 @@
           },
           "length_cutoffs": 1,
           "book_citation_presence": 5,
-          "knowledge_disclosure": 1
+          "knowledge_disclosure": 1,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         },
         {
           "run": 2,
@@ -450,15 +472,19 @@
           },
           "length_cutoffs": 1,
           "book_citation_presence": 5,
-          "knowledge_disclosure": 1
+          "knowledge_disclosure": 1,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         }
       ]
     },
     {
       "key": "lfminstruct",
       "name": "LFM2.5-1.2B-Instruct Q4_K_M",
+      "cohort": "2026-10-27-original",
       "bytes": 730895168,
       "budget_eligible": true,
+      "same_answers": 40,
       "runs": [
         {
           "run": 1,
@@ -510,7 +536,9 @@
           },
           "length_cutoffs": 0,
           "book_citation_presence": 19,
-          "knowledge_disclosure": 0
+          "knowledge_disclosure": 0,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         },
         {
           "run": 2,
@@ -562,15 +590,19 @@
           },
           "length_cutoffs": 0,
           "book_citation_presence": 19,
-          "knowledge_disclosure": 0
+          "knowledge_disclosure": 0,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         }
       ]
     },
     {
       "key": "minicpm",
       "name": "MiniCPM5-1B Q4_K_M",
+      "cohort": "2026-10-27-original",
       "bytes": 688065920,
       "budget_eligible": true,
+      "same_answers": 40,
       "runs": [
         {
           "run": 1,
@@ -622,7 +654,9 @@
           },
           "length_cutoffs": 3,
           "book_citation_presence": 12,
-          "knowledge_disclosure": 2
+          "knowledge_disclosure": 2,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         },
         {
           "run": 2,
@@ -674,7 +708,363 @@
           },
           "length_cutoffs": 3,
           "book_citation_presence": 12,
-          "knowledge_disclosure": 2
+          "knowledge_disclosure": 2,
+          "thinking_markers": 0,
+          "tool_outputs": 0
+        }
+      ]
+    },
+    {
+      "key": "q4_current",
+      "name": "Qwen3.5-0.8B Q4_K_M \u00b7 refreshed runtime",
+      "cohort": "2026-10-28-compatible-runtime",
+      "bytes": 532517120,
+      "budget_eligible": true,
+      "same_answers": 40,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 7,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 2,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.326396,
+              "q1": 0.5643374999999999,
+              "median": 0.730834,
+              "q3": 0.9457982500000001,
+              "max": 1.280956
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.463151,
+              "q1": 0.808819,
+              "median": 1.1553205,
+              "q3": 1.5945597500000002,
+              "max": 1.959127
+            },
+            "all": {
+              "n": 40,
+              "min": 0.326396,
+              "q1": 0.5643374999999999,
+              "median": 0.784106,
+              "q3": 1.00287925,
+              "max": 1.959127
+            }
+          },
+          "length_cutoffs": 0,
+          "book_citation_presence": 6,
+          "knowledge_disclosure": 4,
+          "thinking_markers": 0,
+          "tool_outputs": 0
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 19,
+              "total": 20
+            },
+            "scope": {
+              "passed": 7,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 2,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.186322,
+              "q1": 0.55299325,
+              "median": 0.636961,
+              "q3": 0.746529,
+              "max": 1.211762
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.291397,
+              "q1": 0.6213932500000001,
+              "median": 1.0530855,
+              "q3": 1.2451555,
+              "max": 1.809009
+            },
+            "all": {
+              "n": 40,
+              "min": 0.186322,
+              "q1": 0.55299325,
+              "median": 0.657879,
+              "q3": 0.89361125,
+              "max": 1.809009
+            }
+          },
+          "length_cutoffs": 0,
+          "book_citation_presence": 6,
+          "knowledge_disclosure": 4,
+          "thinking_markers": 0,
+          "tool_outputs": 0
+        }
+      ]
+    },
+    {
+      "key": "lfm3_text",
+      "name": "LFM3-1.7B Q4_K_M",
+      "cohort": "2026-10-28-compatible-runtime",
+      "bytes": 1099627808,
+      "budget_eligible": false,
+      "same_answers": 39,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 20,
+              "total": 20
+            },
+            "scope": {
+              "passed": 2,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 3,
+              "total": 8
+            }
+          },
+          "core_passed": 24,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 1.098718,
+              "q1": 1.473862,
+              "median": 1.9759600000000002,
+              "q3": 2.91611475,
+              "max": 3.352413
+            },
+            "supplement": {
+              "n": 8,
+              "min": 1.885534,
+              "q1": 2.811215,
+              "median": 2.856602,
+              "q3": 2.9815567499999998,
+              "max": 3.011462
+            },
+            "all": {
+              "n": 40,
+              "min": 1.098718,
+              "q1": 1.6063922499999999,
+              "median": 2.3597390000000003,
+              "q3": 2.968093,
+              "max": 3.352413
+            }
+          },
+          "length_cutoffs": 14,
+          "book_citation_presence": 19,
+          "knowledge_disclosure": 8,
+          "thinking_markers": 2,
+          "tool_outputs": 0
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 20,
+              "total": 20
+            },
+            "scope": {
+              "passed": 2,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 3,
+              "total": 8
+            }
+          },
+          "core_passed": 24,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 1.066022,
+              "q1": 1.2804525,
+              "median": 1.8920965,
+              "q3": 2.6588465,
+              "max": 2.986564
+            },
+            "supplement": {
+              "n": 8,
+              "min": 1.543701,
+              "q1": 2.56858675,
+              "median": 2.795348,
+              "q3": 2.94216325,
+              "max": 3.126899
+            },
+            "all": {
+              "n": 40,
+              "min": 1.066022,
+              "q1": 1.464861,
+              "median": 2.196592,
+              "q3": 2.82994075,
+              "max": 3.126899
+            }
+          },
+          "length_cutoffs": 15,
+          "book_citation_presence": 19,
+          "knowledge_disclosure": 8,
+          "thinking_markers": 2,
+          "tool_outputs": 0
+        }
+      ]
+    },
+    {
+      "key": "lfm3_omni",
+      "name": "LFM3-Omni-2B Q4_K_M \u00b7 text-only",
+      "cohort": "2026-10-28-compatible-runtime",
+      "bytes": 1099630080,
+      "budget_eligible": false,
+      "same_answers": 40,
+      "runs": [
+        {
+          "run": 1,
+          "groups": {
+            "book": {
+              "passed": 20,
+              "total": 20
+            },
+            "scope": {
+              "passed": 6,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 3,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.857194,
+              "q1": 1.19441125,
+              "median": 1.5124865,
+              "q3": 1.9115625,
+              "max": 3.891223
+            },
+            "supplement": {
+              "n": 8,
+              "min": 1.356642,
+              "q1": 1.73611075,
+              "median": 2.3064395,
+              "q3": 3.2648034999999997,
+              "max": 4.998906
+            },
+            "all": {
+              "n": 40,
+              "min": 0.857194,
+              "q1": 1.30704975,
+              "median": 1.593005,
+              "q3": 2.0848862500000003,
+              "max": 4.998906
+            }
+          },
+          "length_cutoffs": 2,
+          "book_citation_presence": 20,
+          "knowledge_disclosure": 2,
+          "thinking_markers": 0,
+          "tool_outputs": 0
+        },
+        {
+          "run": 2,
+          "groups": {
+            "book": {
+              "passed": 20,
+              "total": 20
+            },
+            "scope": {
+              "passed": 6,
+              "total": 8
+            },
+            "handling": {
+              "passed": 2,
+              "total": 4
+            },
+            "knowledge": {
+              "passed": 3,
+              "total": 8
+            }
+          },
+          "core_passed": 28,
+          "core_total": 32,
+          "latency": {
+            "core": {
+              "n": 32,
+              "min": 0.707612,
+              "q1": 0.886412,
+              "median": 1.013454,
+              "q3": 1.16308725,
+              "max": 2.609159
+            },
+            "supplement": {
+              "n": 8,
+              "min": 0.870762,
+              "q1": 1.017487,
+              "median": 1.2253025,
+              "q3": 1.7638429999999998,
+              "max": 2.983077
+            },
+            "all": {
+              "n": 40,
+              "min": 0.707612,
+              "q1": 0.9145192499999999,
+              "median": 1.0361065,
+              "q3": 1.2412117500000002,
+              "max": 2.983077
+            }
+          },
+          "length_cutoffs": 2,
+          "book_citation_presence": 20,
+          "knowledge_disclosure": 2,
+          "thinking_markers": 0,
+          "tool_outputs": 0
         }
       ]
     }
